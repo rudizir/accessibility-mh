@@ -1,5 +1,5 @@
 === MH Accessibility Widget ===
-Contributors: myhomepage
+Contributors: rudizi
 Tags: accessibility, ada, wcag, bfsg, widget, a11y, contrast, dyslexia, profiles
 Requires at least: 6.0
 Tested up to: 6.9
