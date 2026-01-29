@@ -1,505 +1,504 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MH Accessibility\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-27 22:03+0000\n"
-"PO-Revision-Date: 2026-01-27 22:06+0000\n"
-"Last-Translator: \n"
-"Language-Team: Deutsch\n"
-"Language: de_DE\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.1; wp-6.9; php-8.4.14\n"
-"X-Domain: mhacc"
+"X-Domain: accessibility-mh"
 
 #: src/Config/settings-definitions.php:34
 msgid "Accessibility Statement Link"
-msgstr "Link zur Erklärung"
+msgstr ""
 
 #. Description of the plugin
 msgid ""
 "Adds a customisable Free Accessibility widget to the website and enables "
 "various accessibility features."
 msgstr ""
-"Fügt der Website ein anpassbares Widget für barrierefreien Zugang hinzu und "
-"aktiviert verschiedene Barrierefreiheitsfunktionen."
 
 #: src/Config/settings-definitions.php:561
 msgid "Adds an outline around focused elements"
-msgstr "Fügt einen Umriss um fokussierte Elemente hinzu"
+msgstr ""
 
 #: src/Config/settings-definitions.php:648
 msgid "Adjust colors for color vision deficiencies"
-msgstr "Farben für Farbsehschwächen anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:444
 msgid "Adjust line spacing"
-msgstr "Zeilenabstand anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:456
 msgid "Adjust spacing between letters"
-msgstr "Buchstabenabstand anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:670
 msgid "Adjusts color saturation"
-msgstr "Farbsättigung anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:83
 msgid "Arabic"
-msgstr "Arabisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:659
 msgid "Automatically adjusts contrast"
-msgstr "Kontrast automatisch anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:630
 msgid "Black and white mode"
-msgstr "Schwarzweißmodus"
+msgstr ""
 
 #: src/Config/settings-definitions.php:200
 msgid "Border Radius"
-msgstr "Rahmenrundung"
+msgstr ""
 
 #: src/Config/settings-definitions.php:495
 msgid "Change text alignment"
-msgstr "Textausrichtung ändern"
+msgstr ""
 
 #: src/Config/settings-definitions.php:79
 msgid "Chinese (Mandarin)"
-msgstr "Chinesisch (Mandarin)"
+msgstr ""
 
 #: src/Config/settings-definitions.php:306
 msgid "Choose the icon for the widget trigger"
-msgstr "Symbol für den Widget-Auslöser auswählen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:170
 msgid "Color"
-msgstr "Farbe"
+msgstr ""
 
 #: src/Config/settings-definitions.php:598
 msgid "Color modes and contrast settings."
-msgstr "Farbmodi und Kontrasteinstellungen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:647
 msgid "Color Vision Filters"
-msgstr "Farbsehfilter"
+msgstr ""
 
 #: src/Config/settings-definitions.php:420
 msgid "Content Modules"
-msgstr "Inhaltsmodule"
+msgstr ""
 
 #: src/Config/settings-definitions.php:201
 msgid "Corner rounding"
-msgstr "Eckenrundung"
+msgstr ""
 
 #: src/Config/settings-definitions.php:527
 msgid "Cursor Reading Aid"
-msgstr "Cursor-Lesehilfe"
+msgstr ""
 
 #: src/Config/settings-definitions.php:247
 msgid "Customize the appearance of the trigger."
-msgstr "Erscheinungsbild des Auslösers anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:118
 msgid "Customize the appearance of the widget."
-msgstr "Erscheinungsbild des Widgets anpassen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:607
 msgid "Dark Mode"
-msgstr "Dunkelmodus"
+msgstr ""
 
 #: src/Config/settings-definitions.php:95
 msgid "Dutch"
-msgstr "Niederländisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:538
 msgid "Dyslexia-Friendly Fonts"
-msgstr "Legastheniefreundliche Schriftarten"
+msgstr ""
 
 #: src/Config/settings-definitions.php:24
 msgid "Enable Widget"
-msgstr "Widget aktivieren"
+msgstr ""
 
 #: src/Config/settings-definitions.php:608
 msgid "Enables dark color scheme"
-msgstr "Dunkles Farbschema aktivieren"
+msgstr ""
 
 #: src/Config/settings-definitions.php:25
 msgid "Enables or disables the accessibility widget."
-msgstr "Aktiviert oder deaktiviert das Barrierefreiheits-Widget"
+msgstr ""
 
 #: src/Config/settings-definitions.php:51
 msgid "English"
-msgstr "Englisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:560
 msgid "Focus Outline"
-msgstr "Fokusrahmen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:189
 msgid "Font Color"
-msgstr "Schriftfarbe"
+msgstr ""
 
 #: src/Config/settings-definitions.php:431
 msgid "Font Size"
-msgstr "Schriftgröße"
+msgstr ""
 
 #: src/Config/settings-definitions.php:63
 msgid "French"
-msgstr "Französisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:15
 msgid "General"
-msgstr "Allgemein"
+msgstr ""
 
 #: src/Config/settings-definitions.php:16
 msgid "General settings for activation, language, and legal notices."
-msgstr "Allgemeine Einstellungen für Aktivierung, Sprache und rechtliche Hinweise"
+msgstr ""
 
 #: src/Config/settings-definitions.php:55
 msgid "German"
-msgstr "Deutsch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:738
 msgid "Hide Images"
-msgstr "Bilder ausblenden"
+msgstr ""
 
 #: src/Config/settings-definitions.php:739
 msgid "Hides images on the page"
-msgstr "Blendet Bilder auf der Seite aus"
+msgstr ""
 
 #: src/Config/settings-definitions.php:618
 msgid "High Contrast"
-msgstr "Hoher Kontrast"
+msgstr ""
 
 #: src/Config/settings-definitions.php:717
 msgid "Highlight a focused reading area"
-msgstr "Fokussierten Lesebereich hervorheben"
+msgstr ""
 
 #: src/Config/settings-definitions.php:582
 msgid "Highlight Headings"
-msgstr "Überschriften hervorheben"
+msgstr ""
 
 #: src/Config/settings-definitions.php:477
 msgid "Highlight Links"
-msgstr "Links hervorheben"
+msgstr ""
 
 #: src/Config/settings-definitions.php:478
 msgid "Highlights links on the page"
-msgstr "Hebt Links auf der Seite hervor"
+msgstr ""
 
 #: src/Config/settings-definitions.php:583
 msgid "Highlights page headings"
-msgstr "Hebt Überschriften auf der Seite hervor"
+msgstr ""
 
 #: src/Config/settings-definitions.php:87
 msgid "Hindi"
-msgstr "Hindi"
+msgstr ""
 
 #: src/Config/settings-definitions.php:256
 msgid "Horizontal position on the page"
-msgstr "Horizontale Position auf der Seite"
+msgstr ""
 
 #: src/Config/settings-definitions.php:706
 msgid "Horizontal reading guide"
-msgstr "Horizontale Lesehilfe"
+msgstr ""
 
 #. URI of the plugin
 #. Author URI of the plugin
 msgid "https://www.mh-accessibility.de/"
-msgstr "https://www.mh-accessibility.de/"
+msgstr ""
 
 #: src/Admin/AdminFooter.php:38
 msgid "If you like MH Accessibility, please give us a"
-msgstr "Wenn Ihnen MH Accessibility gefällt, geben Sie uns bitte eine"
+msgstr ""
 
 #: src/Config/settings-definitions.php:539
 msgid "Improves readability for dyslexia"
-msgstr "Verbessert die Lesbarkeit bei Legasthenie"
+msgstr ""
 
 #: src/Config/settings-definitions.php:432
 msgid "Increase or decrease text size"
-msgstr "Textgröße vergrößern oder verkleinern"
+msgstr ""
 
 #: src/Config/settings-definitions.php:619
 msgid "Increases color contrast"
-msgstr "Erhöht den Farbkontrast"
+msgstr ""
 
 #: src/Config/settings-definitions.php:658
 msgid "Intelligent Contrast"
-msgstr "Intelligenter Kontrast"
+msgstr ""
 
 #: src/Config/settings-definitions.php:680
 msgid "Invert Colors"
-msgstr "Farben invertieren"
+msgstr ""
 
 #: src/Config/settings-definitions.php:681
 msgid "Inverts page colors"
-msgstr "Invertiert die Farben der Seite"
+msgstr ""
 
 #: src/Config/settings-definitions.php:67
 msgid "Italian"
-msgstr "Italienisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:103
 msgid "Japanese"
-msgstr "Japanisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:45
 msgid "Language"
-msgstr "Sprache"
+msgstr ""
 
 #: src/Config/settings-definitions.php:46
 msgid "Language of the widget for visitors."
-msgstr "Sprache des Widgets für Besucher"
+msgstr ""
 
 #: src/Config/settings-definitions.php:160
 #: src/Config/settings-definitions.php:374
 msgid "Large"
-msgstr "Groß"
+msgstr ""
 
 #: src/Config/settings-definitions.php:505
 msgid "Large Cursor"
-msgstr "Großer Cursor"
+msgstr ""
 
 #: src/Config/settings-definitions.php:455
 msgid "Letter Spacing"
-msgstr "Buchstabenabstand"
+msgstr ""
 
 #: src/Config/settings-definitions.php:210
 msgid "Light / Dark Mode"
-msgstr "Hell- / Dunkelmodus"
+msgstr ""
 
 #: src/Config/settings-definitions.php:443
 msgid "Line Height"
-msgstr "Zeilenhöhe"
+msgstr ""
 
 #: src/Config/settings-definitions.php:506
 msgid "Makes the cursor larger"
-msgstr "Vergrößert den Mauszeiger"
+msgstr ""
 
 #: src/Config/settings-definitions.php:156
 #: src/Config/settings-definitions.php:370
 msgid "Medium"
-msgstr "Mittel"
+msgstr ""
 
 #. Name of the plugin
 msgid "MH Accessibility"
-msgstr "MH Accessibility"
-
+msgstr ""
 
 #. Author of the plugin
 msgid "MH-ACCESSIBILITY"
-msgstr "MH-ACCESSIBILITY"
+msgstr ""
+
 #: src/Config/settings-definitions.php:629
 msgid "Monochrome"
-msgstr "Monochrom"
+msgstr ""
 
 #: src/Config/settings-definitions.php:550
 msgid "Optimizes text spacing"
-msgstr "Optimiert die Textabstände"
+msgstr ""
 
 #: src/Config/settings-definitions.php:695
 msgid "Orientation & Navigation"
-msgstr "Orientierung & Navigation"
+msgstr ""
 
 #: src/Config/settings-definitions.php:91
 msgid "Polish"
-msgstr "Polnisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:71
 msgid "Portuguese"
-msgstr "Portugiesisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:171
 msgid "Primary color of the widget"
-msgstr "Primärfarbe des Widgets"
+msgstr ""
 
 #: src/Config/settings-definitions.php:466
 msgid "Readable Font"
-msgstr "Gut lesbare Schrift"
+msgstr ""
 
 #: src/Config/settings-definitions.php:696
 msgid "Reading aids, focus tools, and animation settings."
-msgstr "Lesehilfen, Fokus-Werkzeuge und Animationseinstellungen."
+msgstr ""
 
 #: src/Config/settings-definitions.php:705
 msgid "Reading Line"
-msgstr "Leselinie"
+msgstr ""
 
 #: src/Config/settings-definitions.php:716
 msgid "Reading Mask"
-msgstr "Lesemaske"
+msgstr ""
 
 #: src/Config/settings-definitions.php:517
 msgid "Reads text aloud"
-msgstr "Liest Text laut vor"
+msgstr ""
 
 #: src/Config/settings-definitions.php:230
 msgid "Remove Branding"
-msgstr "Branding entfernen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:231
 msgid "Removes branding from the widget"
-msgstr "Entfernt das Branding aus dem Widget"
+msgstr ""
 
 #: src/Config/settings-definitions.php:390
 msgid "Round"
-msgstr "Rund"
+msgstr ""
 
 #: src/Config/settings-definitions.php:75
 msgid "Russian"
-msgstr "Russisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:669
 msgid "Saturation"
-msgstr "Sättigung"
+msgstr ""
 
 #: src/Config/settings-definitions.php:394
 msgid "Semi-Round"
-msgstr "Halbrund"
+msgstr ""
 
 #: src/Config/settings-definitions.php:421
 msgid "Settings for font size, readability, and links."
-msgstr "Einstellungen für Schriftgröße, Lesbarkeit und Links."
+msgstr ""
 
 #: src/Config/settings-definitions.php:362
 msgid "Size of the trigger icon"
-msgstr "Größe des Auslöse-Icons"
+msgstr ""
 
 #: src/Config/settings-definitions.php:147
 msgid "Size of the widget"
-msgstr "Größe des Widgets"
+msgstr ""
 
 #: src/Config/settings-definitions.php:152
 #: src/Config/settings-definitions.php:366
 msgid "Small"
-msgstr "Klein"
+msgstr ""
 
 #: src/Config/settings-definitions.php:549
 msgid "Smart Spacing"
-msgstr "Intelligente Abstände"
+msgstr ""
 
 #: src/Config/settings-definitions.php:59
 msgid "Spanish"
-msgstr "Spanisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:398
 msgid "Square"
-msgstr "Eckig"
+msgstr ""
 
 #: src/Config/settings-definitions.php:727
 msgid "Stop Animations"
-msgstr "Animationen stoppen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:571
 msgid "Stop Autoplay"
-msgstr "Autoplay stoppen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:728
 msgid "Stops all animations"
-msgstr "Stoppt alle Animationen"
+msgstr ""
 
 #: src/Config/settings-definitions.php:572
 msgid "Stops autoplay for videos and audio"
-msgstr "Stoppt die automatische Wiedergabe von Videos und Audio"
+msgstr ""
 
 #: src/Config/settings-definitions.php:494
 msgid "Text Alignment"
-msgstr "Textausrichtung"
+msgstr ""
 
 #: src/Config/settings-definitions.php:190
 msgid "Text color of the widget"
-msgstr "Textfarbe des Widgets"
+msgstr ""
 
 #: src/Config/settings-definitions.php:516
 msgid "Text-to-Speech"
-msgstr "Text-zu-Sprache"
+msgstr ""
 
 #: src/Admin/AdminFooter.php:40
 msgid "Thank you in advance."
-msgstr "Vielen Dank im Voraus."
+msgstr ""
 
 #: src/Settings/SettingsRenderer.php:44
 msgid "These features are only available in the Pro version."
-msgstr "Diese Funktionen sind nur in der Pro-Version verfügbar."
+msgstr ""
 
 #: src/Config/settings-definitions.php:246
 msgid "Trigger Design"
-msgstr "Trigger-Design"
+msgstr ""
 
 #: src/Config/settings-definitions.php:305
 msgid "Trigger Icon"
-msgstr "Trigger-Icon"
+msgstr ""
 
 #: src/Config/settings-definitions.php:361
 msgid "Trigger Icon Size"
-msgstr "Größe des Trigger-Icons"
+msgstr ""
 
 #: src/Config/settings-definitions.php:385
 msgid "Trigger Icon Style"
-msgstr "Stil des Trigger-Icons"
+msgstr ""
 
 #: src/Config/settings-definitions.php:255
 msgid "Trigger Position X"
-msgstr "Horizontale Trigger-Position"
+msgstr ""
 
 #: src/Config/settings-definitions.php:280
 msgid "Trigger Position Y"
-msgstr "Vertikale Trigger-Position"
+msgstr ""
 
 #: src/Config/settings-definitions.php:99
 msgid "Turkish"
-msgstr "Türkisch"
+msgstr ""
 
 #: src/Config/settings-definitions.php:35
 msgid "URL to the official accessibility statement of your website."
-msgstr "URL zur offiziellen Barrierefreiheitserklärung deiner Website."
+msgstr ""
 
 #: src/Config/settings-definitions.php:467
 msgid "Uses an easy-to-read font"
-msgstr "Verwendet eine gut lesbare Schrift"
+msgstr ""
 
 #: src/Admin/AdminFooter.php:53
 #, php-format
 msgid "Version %s"
-msgstr "Version %s"
+msgstr ""
 
 #: src/Config/settings-definitions.php:281
 msgid "Vertical position on the page"
-msgstr "Vertikale Position auf der Seite"
+msgstr ""
 
 #: src/Config/settings-definitions.php:597
 msgid "Visual Modules"
-msgstr "Visuelle Module"
+msgstr ""
 
 #: src/Config/settings-definitions.php:386
 msgid "Visual style of the trigger icon"
-msgstr "Visueller Stil des Trigger-Icons"
+msgstr ""
 
 #: src/Config/settings-definitions.php:127
 msgid "Visual style of the widget"
-msgstr "Visueller Stil des Widgets"
+msgstr ""
 
 #: src/Config/settings-definitions.php:211
 msgid "Widget appearance"
-msgstr "Widget-Erscheinungsbild"
+msgstr ""
 
 #: src/Config/settings-definitions.php:117
 msgid "Widget Design"
-msgstr "Widget-Design"
+msgstr ""
 
 #: src/Config/settings-definitions.php:146
 msgid "Widget Size"
-msgstr "Widget-Größe"
+msgstr ""
 
 #: src/Config/settings-definitions.php:126
 msgid "Widget Style"
-msgstr "Widget-Stil"
+msgstr ""
 
 #: src/Config/settings-definitions.php:528
 msgid "Zooms text near the cursor"
-msgstr "Vergrößert Text in der Nähe des Mauszeigers"
+msgstr ""

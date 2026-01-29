@@ -41,7 +41,7 @@ class SettingsRenderer
 
             <?php if ($group_disabled): ?>
                 <p class="description">
-                    🔒 <?php echo esc_html__('These features are only available in the Pro version.', 'mhacc'); ?>
+                    🔒 <?php echo esc_html__('These features are only available in the Pro version.', 'accessibility-mh'); ?>
                 </p>
             <?php endif; ?>
 

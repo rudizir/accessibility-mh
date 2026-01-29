@@ -1,14 +1,15 @@
 <?php
 /**
- * Plugin Name: MH Accessibility
+ * Plugin Name: Accessibility MH
  * Plugin URI: https://www.mh-accessibility.de/
  * Description: Adds a customisable Free Accessibility widget to the website and enables various accessibility features.
  * Version: 1.5.8
  * Author: MH-ACCESSIBILITY
  * Author URI: https://www.mh-accessibility.de/
- * Text Domain: mhacc
+ * Text Domain: accessibility-mh
  * Domain Path: /languages
  * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -144,7 +145,7 @@ add_filter('admin_body_class', function ($classes) {
 
 add_action('plugins_loaded', function () {
     load_plugin_textdomain(
-        'mhacc',
+        'accessibility-mh',
         false,
         dirname(plugin_basename(__FILE__)) . '/languages'
     );

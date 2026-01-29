@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MH Accessibility\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-27 22:03+0000\n"
-"PO-Revision-Date: 2026-01-27 22:26+0000\n"
+"PO-Revision-Date: 2026-01-27 22:10+0000\n"
 "Last-Translator: \n"
 "Language-Team: Deutsch\n"
 "Language: de_DE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.1; wp-6.9; php-8.4.14\n"
-"X-Domain: mhacc"
+"X-Domain: accessibility-mh"
 
 #: src/Config/settings-definitions.php:34
 msgid "Accessibility Statement Link"
@@ -46,10 +46,6 @@ msgstr "Buchstabenabstand anpassen"
 #: src/Config/settings-definitions.php:670
 msgid "Adjusts color saturation"
 msgstr "Farbsättigung anpassen"
-
-#: src/Admin/AdminHeader.php:27 src/Admin/Admin.php:63 src/Admin/Admin.php:64
-msgid "Analyser"
-msgstr "Analysator"
 
 #: src/Config/settings-definitions.php:83
 msgid "Arabic"
@@ -110,10 +106,6 @@ msgstr "Erscheinungsbild des Auslösers anpassen"
 #: src/Config/settings-definitions.php:118
 msgid "Customize the appearance of the widget."
 msgstr "Erscheinungsbild des Widgets anpassen"
-
-#: src/Admin/AdminHeader.php:106
-msgid "Dark"
-msgstr "Dunkel"
 
 #: src/Config/settings-definitions.php:607
 msgid "Dark Mode"
@@ -278,10 +270,6 @@ msgstr "Großer Cursor"
 msgid "Letter Spacing"
 msgstr "Buchstabenabstand"
 
-#: src/Admin/AdminHeader.php:102
-msgid "Light"
-msgstr "Hell"
-
 #: src/Config/settings-definitions.php:210
 msgid "Light / Dark Mode"
 msgstr "Hell- / Dunkelmodus"
@@ -306,10 +294,6 @@ msgstr "MH Accessibility"
 #. Author of the plugin
 msgid "MH-ACCESSIBILITY"
 msgstr "MH-ACCESSIBILITY"
-
-#: src/Admin/AdminHeader.php:15 src/Admin/Admin.php:42 src/Admin/Admin.php:43
-msgid "Modules"
-msgstr "Module"
 
 #: src/Config/settings-definitions.php:629
 msgid "Monochrome"
@@ -408,10 +392,6 @@ msgstr "Spanisch"
 msgid "Square"
 msgstr "Eckig"
 
-#: src/Admin/AdminHeader.php:23 src/Admin/Admin.php:54 src/Admin/Admin.php:55
-msgid "Statement"
-msgstr "Erklärung"
-
 #: src/Config/settings-definitions.php:727
 msgid "Stop Animations"
 msgstr "Animationen stoppen"
@@ -448,14 +428,6 @@ msgstr "Vielen Dank im Voraus."
 msgid "These features are only available in the Pro version."
 msgstr "Diese Funktionen sind nur in der Pro-Version verfügbar."
 
-#: src/Admin/Admin.php:154
-msgid ""
-"This is a pro feature. Please upgrade to MH-ACCESSIBILITY Pro to use this "
-"feature"
-msgstr ""
-"Dies ist eine Pro-Funktion. Bitte aktualisieren Sie auf MH-ACCESSIBILITY Pro,"
-" um diese Funktion nutzen zu können."
-
 #: src/Config/settings-definitions.php:246
 msgid "Trigger Design"
 msgstr "Trigger-Design"
@@ -483,10 +455,6 @@ msgstr "Vertikale Trigger-Position"
 #: src/Config/settings-definitions.php:99
 msgid "Turkish"
 msgstr "Türkisch"
-
-#: src/Admin/Admin.php:159
-msgid "Upgrade To Pro"
-msgstr "Auf Pro upgraden"
 
 #: src/Config/settings-definitions.php:35
 msgid "URL to the official accessibility statement of your website."
@@ -516,10 +484,6 @@ msgstr "Visueller Stil des Trigger-Icons"
 #: src/Config/settings-definitions.php:127
 msgid "Visual style of the widget"
 msgstr "Visueller Stil des Widgets"
-
-#: src/Admin/AdminHeader.php:11 src/Admin/Admin.php:33 src/Admin/Admin.php:34
-msgid "Welcome"
-msgstr "Willkommen"
 
 #: src/Config/settings-definitions.php:211
 msgid "Widget appearance"

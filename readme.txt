@@ -1,47 +1,69 @@
-=== MH Accessibility ===
+=== MH Accessibility Widget ===
 Contributors: myhomepage
-Tags: accessibility, ada, wcag, contrast, font-size, widget
-Requires at least: 5.0
-Tested up to: 6.7
+Tags: accessibility, ada, wcag, bfsg, widget, a11y, contrast, dyslexia, profiles
+Requires at least: 6.0
+Tested up to: 6.9
 Stable tag: 1.5.8
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A powerful, lightweight accessibility widget to improve your website's accessibility in accordance with WCAG and ADA standards.
+A powerful accessibility widget for WordPress that gives users intuitive controls to improve readability, navigation and inclusivity, while supporting modern accessibility standards like WCAG and local regulations such as BFSG.
 
 == Description ==
 
-MH Accessibility adds a customisable accessibility widget that provides visitors with various accessibility features.
-
-Features:
-
-* Font size adjustment
-* Contrast mode
-* Increase readability
-* Link highlighting
-* Colour optimisation
-* Layout adjustments
-* Optional premium features
-* GDPR compliant, no data transfer without consent
-
-This plugin only communicates with external servers **if the user expressly agrees**.
+MH Accessibility Widget adds a customizable accessibility toolbar to your WordPress site, empowering users with visual, cognitive and motor impairments to personalize their browsing experience. It supports a wide range of inclusive features such as contrast modes, text size adjustments, and more — all designed to help your site become more inclusive and user-friendly.
 
 
+
+== Features ==
+
+=== Widget Customization ===
+* Multiple widget styles and layout options for seamless integration.
+* Control over widget size, position and appearance.
+* Customizable primary colors, border radius and theme.
+
+=== User Content Controls ===
+* Text Size Controls – adjust text size for better readability.
+* Line Height & Letter Spacing – improve clarity and flow.
+* Link Highlighting – makes interactive elements more visible.
+* Text Alignment options.
+
+=== Visual & Contrast Enhancements ===
+* Dark Mode, High Contrast and Monochrome Viewing.
+* Intelligent Contrast Modes for users with visual impairments.
+* Saturation and color inversion options.
+* Adaptive color filters for color blindness support.
+
+=== Navigation & Interaction Improvements ===
+* Visible focus outlines for keyboard navigation.
+* Pause animations and autoplay content.
+* Big Cursor & Cursor zoom for better pointer visibility.
+* Reading guide and reading mask to assist text tracking.
+
+
+
+=== Multilingual Support ===
+* Supports multiple languages for a global audience.
 
 
 == Installation ==
 
-1. Upload the plugin or install it via the WordPress plugin search.
-2. Activate it.
-3. Configure the settings in the ‘MH Accessibility’ menu.
-
+1. Upload the Plugin folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the *Plugins* screen in WordPress.
+3. Navigate to *Settings → MH Accessibility* to configure widget settings.
 
 
 == Frequently Asked Questions ==
 
 = How do I install the plugin? =
 Download MH-Accessibility from the WordPress plugin directory, install it and activate it. That's it. No technical knowledge required.
+
+= Is the plugin compatible with multilingual sites? =
+Yes — the plugin supports language detection and displays appropriate localized controls where configured.
+
+= Can the widget appearance be fully customized? =
+Yes — you can customize widget style, colors, position, icons, and more to match your site’s design.
 
 = Does the plugin work with my theme? =
 Yes, Accessibility Pro is compatible with all modern WordPress themes. It also works with page builders such as Elementor and Divi without any problems.
@@ -96,9 +118,26 @@ No, not at all. The plugin is designed for beginners. All settings are self-expl
 - Text colour cursor 
 - Reading aid revised 
 
-= 1.5.4 (Dec 14, 2025) =
+= 1.5.4 (Dec 13, 2025) =
 - New icons added
 
-= 1.5.0 (Dec 14, 2025) =
+= 1.5.0 (Dec 12, 2025) =
 - Hello World!
+
+
+
+
+
+== Upgrade Notice ==
+
+= 1.5.0 =
+First official release of MH Accessibility Widget.
+
+== License ==
+
+MH Accessibility Widget is licensed under the GPLv2 or later.
+
+== Acknowledgements ==
+
+Special thanks to the accessibility community and users who helped shape the direction and usability focus of this plugin.
 

@@ -30,8 +30,8 @@ class Admin
 
         add_submenu_page(
             'mhacc-widget',
-            __('Welcome', 'mhacc'),
-            __('Welcome', 'mhacc'),
+            __('Welcome', 'accessibility-mh'),
+            __('Welcome', 'accessibility-mh'),
             'manage_options',
             'mhacc-widget',
             [$this, 'page_welcome']
@@ -39,8 +39,8 @@ class Admin
 
         add_submenu_page(
             'mhacc-widget',
-            __('Modules', 'mhacc'),
-            __('Modules', 'mhacc'),
+            __('Modules', 'accessibility-mh'),
+            __('Modules', 'accessibility-mh'),
             'manage_options',
             'mhacc-widget-modules',
             [$this, 'page_modules']
@@ -51,8 +51,8 @@ class Admin
         if (!defined('MHACC_WIDGET_PRO_ACTIVE')) {
             add_submenu_page(
                 'mhacc-widget',
-                __('Statement', 'mhacc'),
-                __('Statement', 'mhacc'),
+                __('Statement', 'accessibility-mh'),
+                __('Statement', 'accessibility-mh'),
                 'manage_options',
                 'mhacc-widget-statement',
                 [$this, 'page_getpro_statement']
@@ -60,8 +60,8 @@ class Admin
 
             add_submenu_page(
                 'mhacc-widget',
-                __('Analyser', 'mhacc'),
-                __('Analyser', 'mhacc'),
+                __('Analyser', 'accessibility-mh'),
+                __('Analyser', 'accessibility-mh'),
                 'manage_options',
                 'mhacc-widget-analyser',
                 [$this, 'page_getpro_analyser']
@@ -151,12 +151,12 @@ class Admin
                 </svg>                
                 
                 <h1><?php echo esc_html($title); ?></h1>
-                <p><?php esc_html_e('This is a pro feature. Please upgrade to MH-ACCESSIBILITY Pro to use this feature', 'mhacc'); ?></p>
+                <p><?php esc_html_e('This is a pro feature. Please upgrade to MH-ACCESSIBILITY Pro to use this feature', 'accessibility-mh'); ?></p>
                 <p>
                     <a href="<?php echo esc_url(MHACC_LINK_TO_PRO); ?>"
                        target="_blank"
                        class="button button-primary">
-                        <?php esc_html_e('Upgrade To Pro', 'mhacc'); ?>
+                        <?php esc_html_e('Upgrade To Pro', 'accessibility-mh'); ?>
                     </a>
                 </p>
                 
