@@ -2,7 +2,10 @@
 node_modules/
 dist/
 
-*.DS_Store
+# macOS
+.DS_Store
+**/.DS_Store
+
 
 # Compiled Java class files
 *.class
