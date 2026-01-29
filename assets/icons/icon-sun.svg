@@ -1,0 +1,17 @@
+<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <g fill="none" fill-rule="evenodd" stroke="currentColor">
+        <circle cx="8" cy="8" r="4.5"/>
+        <g stroke-linecap="round">
+            <path d="M8 1.5V.545M8 15.5v-.955"/>
+        </g>
+        <g stroke-linecap="round">
+            <path d="m12.596 3.404.676-.676M2.697 13.303l.675-.675"/>
+        </g>
+        <g stroke-linecap="round">
+            <path d="M14.5 8h.955M.5 8h.955"/>
+        </g>
+        <g stroke-linecap="round">
+            <path d="m12.596 12.596.676.676M2.697 2.697l.675.675"/>
+        </g>
+    </g>
+</svg>

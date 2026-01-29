@@ -1,0 +1,663 @@
+/* ================================
+   THEME MODES (GLOBAL)
+================================ */
+
+/* Default (Fallback = light) */
+:root {
+    --mhacc-primary: #4a36e9;
+}
+
+/* Light Mode */
+html.light,
+body.light {
+    --mhacc-primary: #4a36e9;
+
+    background-color: #ffffff;
+    color: #1d1d1d;
+}
+
+/* Dark Mode */
+html.dark,
+body.dark {
+    --mhacc-primary: #7c86ff;
+    
+    background-color: #12181e;
+    color: #f5f5f5;
+}
+
+/* ================================
+   WRAP / BOXED
+================================ */
+
+body.light .boxed {
+    background-color: #ffffff;
+    color: #1d1d1d;
+}
+
+body.dark .boxed {
+    background-color: #161e25;
+    color: #f5f5f5;
+}
+
+.light {
+    background-color: #f3f5fa;
+    color: #1d1d1d;
+}
+
+.dark {
+    background-color: #12181e;
+    color: #f5f5f5;
+}
+
+.dark .form-wrap p,
+.dark p.description {
+    color: #adb5c2;
+}
+
+
+.dark .notice, 
+.dark div.error, 
+.dark div.updated {
+background-color: #161e25;
+}
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark .form-table th,
+body.dark .form-wrap label {
+    color: #f5f5f5;
+}
+
+/*
+body.dark p {
+    color:#dddddd;
+}
+*/
+/* ================================
+   NAV / BUTTONS
+================================ */
+
+body.dark .mhacc-nav-item,
+body.dark button {
+    color: #ffffff;
+}
+
+body.dark .mhacc-nav-item:hover {
+    background: #1c2732;
+}
+
+.mhacc-nav {
+    display: flex;
+    gap: 12px;
+}
+.mhacc-nav-item {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: transparent;
+    font-weight: 500;
+    color: #1d2327;
+}
+
+.mhacc-nav-item:hover {
+    background: #f0f0f1;
+    color: #1d2327;
+}
+
+.mhacc-nav-item.is-active {
+    background: var(--mhacc-primary);
+    color: #ffffff;
+}
+
+.wp-core-ui .button-primary {
+    background: var(--mhacc-primary);
+    border-color: var(--mhacc-primary);
+}
+
+.wp-core-ui .button-primary:focus {
+    background: var(--mhacc-primary);
+    border-color: var(--mhacc-primary);
+}
+
+@keyframes triggerPulse {
+    0% {
+        box-shadow: 0 0 0 0 #7c86ff90;
+    }
+
+    70% {
+        box-shadow: 0 0 0 14px #7c86ff00;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 #7c86ff00;
+    }
+}
+
+.wp-core-ui .button-primary:hover {
+    background: var(--mhacc-primary);
+    border-color: var(--mhacc-primary);
+    transition: transform 0.3s ease;
+    animation: triggerPulse 1.8s;
+}
+
+#footer-thankyou a {
+    color: var(--mhacc-primary);
+    text-decoration: none;
+}
+/* ================================
+   DROPDOWN
+================================ */
+
+body.dark .mhacc-dropdown {
+    background-color: #161e25;
+    color: #f5f5f5;
+}
+
+/* ================================
+   FORMS
+================================ */
+
+body.dark input[type="color"],
+body.dark input[type="date"],
+body.dark input[type="datetime-local"],
+body.dark input[type="datetime"],
+body.dark input[type="email"],
+body.dark input[type="month"],
+body.dark input[type="number"],
+body.dark input[type="password"],
+body.dark input[type="search"],
+body.dark input[type="tel"],
+body.dark input[type="text"],
+body.dark input[type="time"],
+body.dark input[type="url"],
+body.dark input[type="week"],
+body.dark select,
+body.dark textarea,
+body.dark input:disabled,
+body.dark select:disabled,
+body.dark textarea:disabled {
+    border: 1px solid #8c8f94;
+    background-color: #1c2732;
+    color: #adb5c2;
+}
+body.dark select:disabled {
+    text-shadow: none;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.mhacc-header {
+    padding: 14px 20px;
+    position: fixed;
+    top: 32px;
+    width: calc(100% - 202px);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.09);
+    z-index: 1;
+    backdrop-filter: blur(5px);
+}
+@media (max-width: 960px) {
+    .mhacc-header {
+        width: calc(100% - 75px);
+    }
+}
+@media (max-width: 782px) {
+    .mhacc-header {
+        top:46px;
+        width: calc(100% - 40px);
+    }
+    .auto-fold #wpcontent {
+        padding-left: 0;
+    }    
+    .mhacc-nav {
+        gap: 0px;
+    }
+}
+
+body.dark .mhacc-header {
+    background-color: #161e25f0;
+}
+
+body.light .mhacc-header {
+    background-color: #fffffff0;
+}
+
+.mhacc-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mhacc-header-inner-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mhacc-logo {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mhacc-logo svg {
+    color: var(--mhacc-primary);
+    width: 40px;
+    height: 40px;
+}
+
+/* ================================
+   THEME SWITCHER
+================================ */
+
+.mhacc-theme-switcher button {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    background: transparent;
+    border: none;
+}
+
+.mhacc-theme-switcher .mhacc-dropdown-trigger button {
+    margin-left: 8px;
+    background-color: transparent;
+    border: none;
+}
+
+.mhacc-theme-switcher button.active {
+    font-weight: bold;
+    border-bottom: 2px solid var(--mhacc-primary);
+}
+
+.mhacc-theme-switcher:hover .mhacc-dropdown {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   DROPDOWN
+================================ */
+.mhacc-dropdown {
+    display: none;
+    position: absolute;
+    right: 20px;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--mhacc-dropdown-bg, #fff);
+    color: var(--mhacc-dropdown-color, #1d1d1d);
+}
+
+body.dark .mhacc-dropdown {
+    --mhacc-dropdown-bg: #161e25;
+    --mhacc-dropdown-color: #f5f5f5;
+}
+
+/* ================================
+   BOXED ELEMENTS
+================================ */
+.boxed {
+    padding: 10px 18px;
+    border-radius: 15px;
+}
+
+/* ================================
+   WRAPPER & LAYOUT
+================================ */
+#wpcontent {
+    padding-left: 0;
+}
+
+#wpbody-content > .wrap {
+    padding: 20px;
+    margin: 0;
+    min-height: calc(100dvh - 192px);
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 88px;
+    background-color: #f3f5fa;
+}
+
+.dark #wpbody-content > .wrap {
+  background: #12181e;
+}
+
+.container_medium {
+    align-self: center;
+    width: 800px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+/* ================================
+   SETTINGS
+================================ */
+.form-table th {
+    width: 300px;
+}
+
+.mhacc-group.boxed {
+    margin-bottom: 20px;
+}
+
+.mhacc-be-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pro-badge {
+    background: var(--mhacc-primary);
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.mhacc-icon {
+    color: var(--mhacc-primary);
+}
+
+.mhacc-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.option_label {
+    padding: 0;
+    margin: 0;
+}
+
+/* ================================
+   TOGGLE SWITCH
+================================ */
+.mhacc-toggle-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+}
+
+/* Input unsichtbar */
+.mhacc-toggle-input {
+    opacity: 0 !important;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.mhacc-toggle-slider {
+    position: absolute;
+    inset: 0;
+    background-color: #cfd4dc;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Knopf */
+.mhacc-toggle-slider::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+/* Aktiv */
+.mhacc-toggle-input:checked + .mhacc-toggle-slider {
+    background-color: var(--mhacc-primary);
+}
+
+.mhacc-toggle-input:checked + .mhacc-toggle-slider::before {
+    transform: translateX(16px);
+}
+
+/* Disabled */
+.mhacc-toggle-input:disabled + .mhacc-toggle-slider {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.wp-core-ui select.disabled,
+.wp-core-ui select:disabled {
+    cursor: not-allowed;
+}
+
+/* ================================
+   ICON RADIOS
+================================ */
+.mhacc-icon-radios {
+    display: flex;
+    gap: 12px;
+}
+
+.mhacc-icon-radio {
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mhacc-icon-radio input {
+    display: none;
+}
+
+.mhacc-icon-radio-icon svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+/* Aktiv/Checked */
+.mhacc-icon-radio input:checked + .mhacc-icon-radio-icon {
+    background: rgba(74, 54, 233, 0.1);
+}
+
+/* Rahmen aktiv */
+.mhacc-icon-radio:has(input:checked) {
+    border-color: var(--mhacc-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   ICON RADIOS & DISABLED
+================================ */
+.mhacc-icon-radio.is-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.mhacc-icon-radio .pro-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-size: 10px;
+}
+
+/* Aktiv / Checked */
+.mhacc-icon-radio input:checked + .mhacc-icon-radio-icon {
+    background: rgba(74, 54, 233, 0.1);
+}
+
+/* Rahmen aktiv */
+.mhacc-icon-radio:has(input:checked) {
+    border-color: var(--mhacc-primary);
+}
+
+/* ================================
+   POSITION FIELD
+================================ */
+.mhacc-position-field {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.mhacc-position-field .mhacc-position-number {
+    width: 60px;
+}
+
+/* ================================
+   COLOR PICKERS
+================================ */
+.mhacc-color-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mhacc-color-options {
+    display: flex;
+    gap: 8px;
+}
+
+.mhacc-color-swatch {
+    cursor: pointer;
+}
+
+.mhacc-color-swatch input {
+    display: none;
+}
+
+.mhacc-color-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: all 0.2s ease;
+    display: block;
+}
+
+.mhacc-color-swatch input:checked + .mhacc-color-circle {
+    border-color: var(--mhacc-primary);
+    box-shadow: 0 0 0 3px rgba(74, 54, 233, 0.25);
+}
+
+.mhacc-color-input {
+    width: 90px;
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.mhacc-color-picker {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* ================================
+   TWO COLUMN LAYOUT & SETTINGS PANEL
+================================ */
+.two_col_wrap,
+#mhacc_settings_wrap {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 400px;
+}
+
+@media (max-width: 1100px) {
+    .two_col_wrap,
+    #mhacc_settings_wrap {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Sticky panel */
+.two_col_wrap .sticky,
+#mhacc_settings_dummy_panel {
+    position: sticky;
+    top: 120px;
+    padding: 10px 18px;
+    border-radius: 15px;
+    background-color: var(--mhacc-sticky-bg, #fff);
+    color: var(--mhacc-sticky-color, #1d1d1d);
+}
+
+
+/* Dark Mode overrides */
+body.dark .two_col_wrap .sticky,
+body.dark #mhacc_settings_dummy_panel {
+    --mhacc-sticky-bg: #161e25;
+    --mhacc-sticky-color: #f5f5f5;
+}
+
+/* Accent border for sticky panel */
+.two_col_wrap .sticky {
+    border-left: 4px solid var(--mhacc-primary);
+    border-radius: 0;
+}
+
+/* Body content padding */
+#wpbody-content {
+    padding-bottom: 0;
+}
+
+
+
+
