@@ -5,7 +5,7 @@ class AdminFooter
 {
     public function __construct()
     {
-        add_filter('admin_footer_text', [$this, 'render_footer_left']);
+        //add_filter('admin_footer_text', [$this, 'render_footer_left']);
         add_filter('update_footer', [$this, 'render_footer_right'], 11);
     }
 
@@ -30,7 +30,7 @@ class AdminFooter
         if (!$this->is_plugin_page()) {
             return $text;
         }
-
+        
         return sprintf(
             '<span id="footer-thankyou">
                 %s <a href="%s" target="_blank" rel="noopener noreferrer" class="mhacc-rating-link" aria-label="five stars">★★★★★</a>. 
@@ -38,6 +38,7 @@ class AdminFooter
             esc_html__('If you like MH Accessibility, please give us a', 'accessibility-mh'),
             esc_url(MHACC_LINK_TO_RATINGS)
         ) . ' ' . esc_html__('Thank you in advance.', 'accessibility-mh');
+        
     }
 
     /**
