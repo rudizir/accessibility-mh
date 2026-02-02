@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Widget;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 class WidgetSettings
 {

@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Admin;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 use MHACC\Admin\AdminHeader;
 use MHACC\Admin\AdminTheme;
@@ -184,16 +185,21 @@ class Admin
     {
         $settings = get_option('mhacc_settings', []);
 
-        if (
-            isset($_POST['mhacc_settings_nonce']) &&
-            wp_verify_nonce($_POST['mhacc_settings_nonce'], 'mhacc_save_settings')
-        ) {
+		if (
+			isset( $_POST['mhacc_settings_nonce'] ) &&
+			wp_verify_nonce(
+				sanitize_text_field( wp_unslash( $_POST['mhacc_settings_nonce'] ) ),
+				'mhacc_save_settings'
+			)
+		) {
             $new = $settings;
 
-            foreach ($_POST['mhacc_settings'] ?? [] as $key => $value) {
-                $new[$key] = is_array($value)
-                    ? array_map('sanitize_text_field', $value)
-                    : sanitize_text_field($value);
+            $raw_settings = wp_unslash( $_POST['mhacc_settings'] ?? [] );
+
+            foreach ( $raw_settings as $key => $value ) {
+                $new[ $key ] = is_array( $value )
+                    ? array_map( 'sanitize_text_field', $value )
+                    : sanitize_text_field( $value );
             }
 
             // unchecked toggles = 0

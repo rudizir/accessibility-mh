@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Admin;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 class AdminFooter
 {
@@ -51,6 +52,7 @@ class AdminFooter
         }
 
         return sprintf(
+            /* translators: %s: plugin version number */
             esc_html__('Version %s', 'accessibility-mh'),
             esc_html(MHACC_VERSION)
         );

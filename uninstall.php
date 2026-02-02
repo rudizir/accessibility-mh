@@ -5,8 +5,8 @@ if (!defined('WP_UNINSTALL_PLUGIN')) {
 
 global $wpdb;
 
-
-$options = $wpdb->get_col(
+// Lösche alle Optionen, die mit mhacc_ beginnen
+$mhacc_options = $wpdb->get_col(
     $wpdb->prepare(
         "SELECT option_name
          FROM {$wpdb->options}
@@ -15,27 +15,38 @@ $options = $wpdb->get_col(
     )
 );
 
-foreach ($options as $option) {
-    delete_option($option);
+foreach ($mhacc_options as $mhacc_option) {
+    delete_option($mhacc_option);
+    wp_cache_delete($mhacc_option, 'options'); // Cache leeren
 }
 
 
 $wpdb->query(
-    "DELETE FROM {$wpdb->options}
-     WHERE option_name LIKE '_transient_mhacc_%'
-        OR option_name LIKE '_transient_timeout_mhacc_%'"
+    $wpdb->prepare(
+        "
+        DELETE FROM {$wpdb->options}
+        WHERE option_name LIKE %s
+           OR option_name LIKE %s
+        ",
+        '_transient_mhacc_%',
+        '_transient_timeout_mhacc_%'
+    )
 );
 
-if (is_multisite()) {
 
-    $siteOptions = $wpdb->get_col(
-        "SELECT meta_key
-         FROM {$wpdb->sitemeta}
-         WHERE meta_key LIKE 'mhacc_%'"
+// Multisite
+if (is_multisite()) {
+    $mhacc_siteOptions = $wpdb->get_col(
+        $wpdb->prepare(
+            "SELECT meta_key
+             FROM {$wpdb->sitemeta}
+             WHERE meta_key LIKE %s",
+            'mhacc_%'
+        )
     );
 
-    foreach ($siteOptions as $option) {
-        delete_site_option($option);
+    foreach ($mhacc_siteOptions as $mhacc_option) {
+        delete_site_option($mhacc_option);
+        wp_cache_delete($mhacc_option, 'site-options'); // Cache leeren
     }
-
 }

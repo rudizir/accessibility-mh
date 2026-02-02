@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Admin;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 class AdminSettings
 {

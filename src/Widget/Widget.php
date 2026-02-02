@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Widget;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 class Widget
 {
@@ -19,6 +20,7 @@ class Widget
         );
         
         $settings = get_option('mhacc_settings', []);
+        
 
         if (!empty($settings['widget_active'])) {
         
@@ -34,7 +36,8 @@ class Widget
                 MHACC_WIDGET_URL . 'assets/js/widget.min.js',
                 [],
                 filemtime( MHACC_WIDGET_PATH . 'assets/js/widget.min.js' ),
-                true
+                true,
+                [ 'strategy' => 'defer' ],
             );
 
             /**
@@ -52,17 +55,11 @@ class Widget
                 ]
             );
 
-            /**
-             * JS defer
-             */
-            add_filter('script_loader_tag', function($tag, $handle, $src) {
-                if ($handle === 'mhacc-widget') {
-                    return '<script src="' . esc_url($src) . '" defer></script>';
-                }
-                return $tag;
-            }, 10, 3);
             
         }
+
+        
     }
     
+
 }

@@ -88,7 +88,7 @@ add_action('wp_ajax_mhacc_widget_set_theme', function() {
         wp_send_json_error();
     }
 
-    $mode = sanitize_text_field($_POST['mode'] ?? '');
+    $mode = sanitize_text_field( wp_unslash( $_POST['mode'] ?? '' ) );
     if (!in_array($mode, ['system','light','dark'], true)) {
         wp_send_json_error();
     }
@@ -143,10 +143,3 @@ add_filter('admin_body_class', function ($classes) {
 
 
 
-add_action('plugins_loaded', function () {
-    load_plugin_textdomain(
-        'accessibility-mh',
-        false,
-        dirname(plugin_basename(__FILE__)) . '/languages'
-    );
-});

@@ -1,6 +1,6 @@
-=== MH Accessibility Widget ===
+=== Accessibility MH ===
 Contributors: rudizi
-Tags: accessibility, ada, wcag, bfsg, widget, a11y, contrast, dyslexia, profiles
+Tags: accessibility, ada, wcag, bfsg, widget
 Requires at least: 6.0
 Tested up to: 6.9
 Stable tag: 1.5.8
@@ -8,12 +8,9 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A powerful accessibility widget for WordPress that gives users intuitive controls to improve readability, navigation and inclusivity, while supporting modern accessibility standards like WCAG and local regulations such as BFSG.
 
 == Description ==
-
-MH Accessibility Widget adds a customizable accessibility toolbar to your WordPress site, empowering users with visual, cognitive and motor impairments to personalize their browsing experience. It supports a wide range of inclusive features such as contrast modes, text size adjustments, and more — all designed to help your site become more inclusive and user-friendly.
-
+MH Accessibility Widget adds a customizable accessibility toolbar, empowering users with visual, cognitive, and motor impairments.
 
 
 == Features ==

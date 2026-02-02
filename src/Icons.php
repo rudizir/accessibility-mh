@@ -13,27 +13,27 @@ function mhacc_load_icons(): array {
         return $cache;
     }
 
-    $icon_dir = MHACC_WIDGET_PATH . 'assets/icons/';
-    $icons = [];
+    $mhacc_icon_dir = MHACC_WIDGET_PATH . 'assets/icons/';
+    $mhacc_icons = [];
 
-    if (!is_dir($icon_dir)) {
+    if (!is_dir($mhacc_icon_dir)) {
         return [];
     }
 
-    foreach (glob($icon_dir . '*.svg') as $file) {
+    foreach (glob($mhacc_icon_dir . '*.svg') as $file) {
         if (!is_file($file)) continue;
 
         $key = basename($file, '.svg');
         $svg = trim(file_get_contents($file));
         $svg = preg_replace('/<\?xml.*?\?>/', '', $svg);
 
-        $icons[$key] = $svg;
+        $mhacc_icons[$key] = $svg;
     }
 
     /**
      * 🔌 Pro / Add-ons können Icons ergänzen oder überschreiben
      */
-    $cache = apply_filters('mhacc_widget_icons', $icons);
+    $cache = apply_filters('mhacc_widget_icons', $mhacc_icons);
 
     return $cache;
 }

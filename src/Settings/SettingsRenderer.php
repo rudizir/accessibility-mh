@@ -1,5 +1,6 @@
 <?php
 namespace MHACC\Settings;
+if ( ! defined( "ABSPATH" ) ) exit;
 
 class SettingsRenderer
 {
@@ -68,9 +69,51 @@ class SettingsRenderer
         <tr>
             <th scope="row">
                 <div class="mhacc-be-option">
-                    <div class="mhacc-icon">
-                        <?php echo $field['icon']; ?>
-                    </div>
+					<div class="mhacc-icon">
+						<?php
+						echo wp_kses(
+							$field['icon'],
+                            array(
+                                'svg' => array(
+                                    'xmlns' => true,
+                                    'width' => true,
+                                    'height' => true,
+                                    'viewbox' => true,
+                                    'fill' => true,
+                                    'aria-hidden' => true,
+                                    'focusable' => true,
+                                    'role' => true,
+                                    'class' => true,
+                                ),
+                                'path' => array(
+                                    'd' => true,
+                                    'fill' => true,
+                                    'stroke' => true,
+                                    'stroke-width' => true,
+                                ),
+                                'circle' => array(
+                                    'cx' => true,
+                                    'cy' => true,
+                                    'r' => true,
+                                    'fill' => true,
+                                ),
+                                'rect' => array(
+                                    'x' => true,
+                                    'y' => true,
+                                    'width' => true,
+                                    'height' => true,
+                                    'rx' => true,
+                                    'fill' => true,
+                                ),
+                                'g' => array(
+                                    'fill' => true,
+                                    'stroke' => true,
+                                ),
+                            )
+						);
+						?>
+					</div>
+
                     <div>
                         <p class="option_label">
                             <?php echo esc_html($field['label']); ?>
@@ -135,10 +178,50 @@ class SettingsRenderer
                                         <?php disabled($option_disabled); ?>
                                     >
 
-                                    <span class="mhacc-icon-radio-icon">
-                                        <?php echo $option['icon']; ?>
-                                    </span>
-
+									<span class="mhacc-icon-radio-icon">
+										<?php
+										echo wp_kses(
+											$option['icon'],
+                                            array(
+                                                'svg' => array(
+                                                    'xmlns' => true,
+                                                    'width' => true,
+                                                    'height' => true,
+                                                    'viewbox' => true,
+                                                    'fill' => true,
+                                                    'aria-hidden' => true,
+                                                    'focusable' => true,
+                                                    'role' => true,
+                                                    'class' => true,
+                                                ),
+                                                'path' => array(
+                                                    'd' => true,
+                                                    'fill' => true,
+                                                    'stroke' => true,
+                                                    'stroke-width' => true,
+                                                ),
+                                                'circle' => array(
+                                                    'cx' => true,
+                                                    'cy' => true,
+                                                    'r' => true,
+                                                    'fill' => true,
+                                                ),
+                                                'rect' => array(
+                                                    'x' => true,
+                                                    'y' => true,
+                                                    'width' => true,
+                                                    'height' => true,
+                                                    'rx' => true,
+                                                    'fill' => true,
+                                                ),
+                                                'g' => array(
+                                                    'fill' => true,
+                                                    'stroke' => true,
+                                                ),
+                                            )
+										);
+										?>
+									</span>
                                     <?php if ($option_is_pro): ?>
                                         <span class="pro-badge">PRO</span>
                                     <?php endif; ?>
