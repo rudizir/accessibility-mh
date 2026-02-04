@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Accessibility MH
  * Plugin URI: https://www.mh-accessibility.de/
- * Description: Adds a customisable Free Accessibility widget to the website and enables various accessibility features.
+ * Description: Adds a customisable Accessibility widget to the website and enables various accessibility features.
  * Version: 1.5.8
- * Author: MH-ACCESSIBILITY
- * Author URI: https://www.mh-accessibility.de/
+ * Author: MH-ACCESSIBILITY Team
+ * Author URI: https://www.mh-accessibility.de/about-us
  * Text Domain: accessibility-mh
  * Domain Path: /languages
  * License: GPLv2 or later
