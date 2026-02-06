@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Accessibility MH
- * Plugin URI: https://www.mh-accessibility.de/
+ * Plugin URI: https://mh-accessibility.de/
  * Description: Adds a customisable Accessibility widget to the website and enables various accessibility features.
  * Version: 1.5.8
  * Author: MH-ACCESSIBILITY Team
- * Author URI: https://www.mh-accessibility.de/about-us
+ * Author URI: https://mh-accessibility.de/about-us
  * Text Domain: accessibility-mh
  * Domain Path: /languages
  * License: GPLv2 or later
@@ -18,9 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'MHACC_WIDGET_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MHACC_WIDGET_URL', plugin_dir_url( __FILE__ ) );
-define( 'MHACC_LINK_TO_PRO', 'https://www.mh-accessibility.de/preise/');
+define( 'MHACC_LINK_TO_PRO', 'https://mh-accessibility.de/preise/');
 
-define( 'MHACC_LINK_TO_RATINGS', 'https://www.mh-accessibility.de/');
+define( 'MHACC_LINK_TO_RATINGS', 'https://mh-accessibility.de/');
 
 define( 'MHACC_VERSION', '1.5.8');
 

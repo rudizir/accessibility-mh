@@ -2,7 +2,7 @@
 
 A powerful and customizable accessibility widget for WordPress that helps improve usability and inclusivity for all users — including people with visual, cognitive, motor, and neurological impairments.
 
-🔗 Website: https://www.mh-accessibility.de  
+🔗 Website: https://mh-accessibility.de  
 📦 WordPress Plugin: MH Accessibility Widget  
 📜 License: GPLv2 or later
 
