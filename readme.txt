@@ -3,7 +3,7 @@ Contributors: rudizi
 Tags: accessibility, ada, wcag, bfsg, widget
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 1.5.8
+Stable tag: 1.5.9
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -91,6 +91,9 @@ No, not at all. The plugin is designed for beginners. All settings are self-expl
 
 
 == Changelog ==
+= 1.5.9 (Feb 06, 2026) =
+- new routing
+
 = 1.5.8 (Jan 29, 2026) =
 - Redesign Analyser
 - Translations Analyser
