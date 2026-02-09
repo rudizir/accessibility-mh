@@ -42,12 +42,10 @@ class AdminHeader
             <div class="mhacc-header-inner">
 
                 <h1 class="mhacc-logo">
-                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <g fill="currentColor">
-                            <path d="M2.881,59.625v25.604l22.175,12.803L47.23,85.229V59.625L25.056,46.822L2.881,59.625z M37.778,79.772l-12.722,7.345l-12.723-7.345v-14.69l12.723-7.346l12.722,7.346V79.772z"></path>
-                            <path d="M72.556,15.759L50.381,2.957L28.206,15.76v25.605l22.175,12.803l22.175-12.803V15.759z M63.104,35.907l-12.723,7.346l-12.722-7.346v-14.69l12.722-7.346l12.723,7.346V35.907z"></path>
-                            <path d="M75.707,46.822L53.531,59.625v25.604l22.175,12.803l22.175-12.803V59.625L75.707,46.822z M88.429,79.772l-12.723,7.345l-12.723-7.345v-14.69l12.724-7.346l12.722,7.346V79.772z"></path>
-                        </g>
+                    <svg fill="none" viewBox="5 6 30 30" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="14" r="6" fill="currentColor" opacity="1" transform-origin="20px 13px"></circle>
+                        <path d="M9 25.5C9 25.5 14.5 21 20 21C25.5 21 31 25.5 31 25.5" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+                        <path d="M13 31.5C13 31.5 16.5 29 20 29C23.5 29 27 31.5 27 31.5" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
                     </svg>
                 </h1>
 
