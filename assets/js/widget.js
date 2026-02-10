@@ -22,7 +22,6 @@
         });
     }
 
-// ⚡ Dann in MHACC.init() aufrufen
 
 
     /**
@@ -53,6 +52,8 @@
             this.applyFeatures();
             this.applyFeatureEffects(); 
             cacheTextBaseValues();
+
+            this.keyboard.init();
         },
 
         detectPro() {
@@ -283,6 +284,7 @@
 
 
 
+
     MHACC.i18n = {
         lang: MHACC_WIDGET_CONFIG.lang || "en",
 
@@ -373,12 +375,29 @@
 
                         
                             <button aria-label="Open Languages Menue" id="btn_mhacc_toogle_lang" data-action="toogle_lang">
-                                <span class="mhacc-lang-label"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path>
+                                </svg>
                                 <div id="lang_items"></div>
                             </button>
                 
                             
-                            <button aria-label="Open User Options" data-action="toogle_user_options">${ICONS["icon-config"]}</button>
+                            <button aria-label="Open User Options" data-action="toogle_user_options">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                                </svg>
+                            </button>
+
+                            <button id="mhacc-help-btn" aria-label="Hilfe und Informationen öffnen" data-action="open_help" title="Hilfe / Tastaturbefehle">
+                                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                                    <path d="M6.5 6.2c0-1 .8-1.6 1.6-1.6.9 0 1.7.6 1.7 1.6 0 .9-.6 1.3-1.2 1.7-.5.3-.8.7-.8 1.2v.3" 
+                                        stroke="currentColor" fill="none" stroke-linecap="round"/>
+                                    <circle cx="8" cy="11.3" r=".8" fill="currentColor"/>
+                                </svg>
+                            </button>
+
                             <button aria-label="Widget close" data-action="close">${ICONS["icon-close"]}</button>
                         
                     </div>
@@ -1090,6 +1109,15 @@
                     userOptions?.classList.remove("is-open");
                     break;
 
+                case "open_help":
+                    const help_panel = document.getElementById("mhacc-help-panel");
+                    if (help_panel && help_panel.style.display === "flex") {
+                        help_panel.style.display = "none";
+                    } else {
+                        MHACC.help.open();
+                    }
+                    break;
+
                 case "close":
                     panel.classList.remove("is-open");
                     userOptions?.classList.remove("is-open");
@@ -1211,6 +1239,603 @@
     };
 
 
+
+    
+
+MHACC.help = {
+    open() {
+        let panel = document.getElementById("mhacc-help-panel");
+        if (!panel) {
+            panel = document.createElement("div");
+            panel.id = "mhacc-help-panel";
+            panel.className = "mhacc-panel mhacc-help";
+
+            const title = MHACC.i18n.t("shortcuttitle", "Shortcuts");
+
+            panel.innerHTML = `
+                <div id="mhacc-help-header">
+                    <h2>${title}</h2>
+                    <button id="mhacc-help-close" aria-label="Close help panel">
+                        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <g fill="currentColor" fill-rule="nonzero">
+                                <path d="M1.084 1.791a.5.5 0 1 1 .707-.707l13.125 13.125a.5.5 0 0 1-.707.707L1.084 1.791Z"></path>
+                                <path d="M14.916 1.791a.5.5 0 1 0-.707-.707L1.084 14.209a.5.5 0 0 0 .707.707L14.916 1.791Z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- HINWEIS ZUR TASTATURNAVIGATION -->
+                <div id="mhacc-help-notice" class="mhacc-help-notice" role="note" aria-live="polite"></div>
+
+                <div id="mhacc-help-table-wrap">
+                    <table id="mhacc-help-table">
+                        <tbody></tbody>
+                    </table>
+                </div>
+            `;
+            document.body.appendChild(panel);
+
+            document.getElementById("mhacc-help-close")
+                .addEventListener("click", () => panel.remove());
+        }
+
+
+
+        // ==============================================
+        // HINWEIS-TEXT JE NACH STATUS
+        // ==============================================
+        const notice = panel.querySelector("#mhacc-help-notice");
+
+        const isActive = document.body.classList.contains("mhacc--keyboard_navigation");
+        notice.innerHTML = isActive
+            ? MHACC.i18n.t(
+                "shortcutnote_active",
+                "✓ Tastaturnavigation ist aktiv."
+            )
+            : MHACC.i18n.t(
+                "shortcutnote_inactive",
+                "Diese Shortcuts funktionieren nur bei aktivierter Tastaturnavigation (Alt + K)."
+            );
+
+
+        // ==============================================
+        // TABELLE AUFBAUEN
+        // ==============================================
+        const tbody = panel.querySelector("tbody");
+        tbody.innerHTML = "";
+
+        const hotkeys = MHACC.i18n.dict?.hotkeys || {};
+        if (!Object.keys(hotkeys).length) {
+            const row = document.createElement("tr");
+            const cell = document.createElement("td");
+            cell.colSpan = 2;
+            cell.textContent = MHACC.i18n.t("no_shortcuts","No shortcuts defined for this language.");
+            row.appendChild(cell);
+            tbody.appendChild(row);
+        } else {
+            const translateKey = k => {
+                const map = { alt: "Alt", ctrl: "Strg", shift: "Shift", enter: "Enter", tab: "Tab", esc: "Esc", space: "Space" };
+                return map[k.toLowerCase()] || k.toUpperCase();
+            };
+
+            for (const [shortcut, description] of Object.entries(hotkeys)) {
+                const row = document.createElement("tr");
+                const keyCell = document.createElement("td");
+                const descCell = document.createElement("td");
+
+                const keys = shortcut.split("_").map(translateKey);
+                keyCell.innerHTML = keys.map(k => `<kbd>${k}</kbd>`).join(" + ");
+
+                // Hotkey-Beschreibung ist bereits die Übersetzung
+                descCell.textContent = description;
+
+                row.appendChild(keyCell);
+                row.appendChild(descCell);
+                tbody.appendChild(row);
+            }
+        }
+
+        panel.style.display = "flex";
+        panel.focus();
+    }
+};
+
+
+
+
+
+    MHACC.keyboard = {
+
+        init() {
+            this.bindGlobalKeys();
+            this.bindPanelKeys();
+        },
+
+
+        triggerSlider(group, feature, delta) {
+
+            const btn = document.querySelector(
+                `.mhacc-slider-btn[data-feature="${feature}"]` +
+                `[data-group="${group}"][data-delta="${delta}"]`
+            );
+
+            btn?.dispatchEvent(
+                new MouseEvent("click", {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                })
+            );
+        },
+
+
+
+        triggerToggle(selector) {
+            const btn = document.querySelector(selector);
+            btn?.dispatchEvent(
+                new MouseEvent("click", {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                })
+            );
+        },
+
+        isEnabled() {
+            return document.body.classList.contains("mhacc--keyboard_navigation");
+        },
+
+        getFocusable(panel) {
+            return [
+                ...panel.querySelectorAll(
+                    'button, [href], input, select, textarea, [tabindex="0"]'
+                )
+            ].filter(el => !el.disabled && el.offsetParent !== null);
+        },
+
+        // ==========================
+        // GLOBALE KEYS
+        // ==========================
+        bindGlobalKeys() {
+            document.addEventListener("keydown", (e) => {
+                
+                
+                const panel   = document.getElementById("mhacc-panel");
+                const trigger = document.getElementById("mhacc-trigger");
+        
+                // ==========================================
+                // ALT + K → Keyboard Navigation toggeln
+                // ==========================================
+                if (e.altKey && e.code === "KeyK") {
+                    e.preventDefault();
+                    this.triggerToggle(
+                        '.mhacc-feature-btn[data-feature="keyboard_navigation"]' +
+                        '[data-group="orientierung_navigation"]'
+                    );
+                    return;
+                }
+
+
+                if (!this.isEnabled()) return;
+
+
+                // ALT + 9 → Hilfe/Info öffnen/close toggle
+                if (e.altKey && e.code === "Digit9") {
+                    e.preventDefault();
+                    const panel = document.getElementById("mhacc-help-panel");
+                    if (panel && panel.style.display === "flex") {
+                        panel.style.display = "none"; // Panel schließen
+                    } else {
+                        MHACC.help.open(); // Panel öffnen
+                    }
+                    return;
+                }
+
+
+                
+                // ==========================================
+                // CTRL + SHIFT + A → Fokus auf Widget
+                // ==========================================
+                if (e.ctrlKey && e.shiftKey && e.code === "KeyA") {
+                    e.preventDefault();
+                    const panel   = document.getElementById("mhacc-panel");
+                    const trigger = document.getElementById("mhacc-trigger");
+                    // Öffnen falls zu
+                    if (!panel?.classList.contains("is-open")) {
+                        trigger?.click();
+                    }
+                    setTimeout(() => this.focusFirst(), 50);
+                    return;
+                }
+                // ==========================================
+                // ALT + N → Navigation
+                // ==========================================
+                if (e.altKey && e.code === "KeyN") {
+                    e.preventDefault();
+
+                    const nav = document.querySelector("nav, #nav, #navigation");
+
+                    if (nav) {
+                        nav.setAttribute("tabindex", "-1");
+                        nav.focus();
+                        nav.scrollIntoView({ behavior: "smooth" });
+                    }
+
+                    return;
+                }     
+
+                // ==========================================
+                // ALT + S → Skip to Content
+                // ==========================================
+                if (e.altKey && e.code === "KeyS") {
+                    e.preventDefault();
+
+                    const main = document.querySelector("main");
+
+                    if (main) {
+                        main.setAttribute("tabindex", "-1");
+                        main.focus();
+                        main.scrollIntoView({ behavior: "smooth" });
+                    }
+
+                    return;
+                }      
+                // ==========================================
+                // ALT + ← / → → Browser Back/Forward
+                // ==========================================
+                if (e.altKey && e.code === "ArrowLeft") {
+                    e.preventDefault();
+                    history.back();
+                    return;
+                }
+
+                if (e.altKey && e.code === "ArrowRight") {
+                    e.preventDefault();
+                    history.forward();
+                    return;
+                }
+
+
+
+
+                // --------------------------------------------
+                // WIDGET ÖFFNEN
+                // Alt + 1
+                // --------------------------------------------
+                if (e.altKey && e.code === "Digit1") {
+                    e.preventDefault();
+                    trigger?.click();
+                    setTimeout(() => {this.focusFirst();}, 50);
+                    return;
+                }
+
+                // ==========================================
+                // ALT + 0 → Widget Reset
+                // ==========================================
+                if (e.altKey && e.code === "Digit0") {
+                    e.preventDefault();
+
+                    const resetBtn = document.getElementById("mhacc-misc");
+
+                    resetBtn?.dispatchEvent(
+                        new MouseEvent("click", {
+                            bubbles: true,
+                            cancelable: true,
+                            view: window
+                        })
+                    );
+
+                    return;
+                }
+
+
+
+
+
+
+                const toggles = {
+                    KeyL: ['inhaltsmodule', 'highlight_links'],
+                    KeyH: ['inhaltsmodule', 'highlight_title'],
+                    KeyF: ['inhaltsmodule', 'focus'],
+                    KeyV: ['inhaltsmodule', 'stop_autoplay'],
+                    KeyP: ['inhaltsmodule', 'tts'],
+                    KeyD: ['visuelle_module', 'dark_mode'],
+                    KeyC: ['visuelle_module', 'high_contrast'],
+                    KeyR: ['orientierung_navigation', 'reading_line'],
+                    KeyI: ['orientierung_navigation', 'hide_images'],
+                    KeyO: ['orientierung_navigation', 'stop_animations']
+                };
+                if (e.altKey && toggles[e.code]) {
+                    e.preventDefault();
+                    const [group, feature] = toggles[e.code];
+                    this.triggerToggle(
+                    `.mhacc-feature-btn[data-feature="${feature}"][data-group="${group}"]`
+                    );
+                    return;
+                }
+
+                // ==========================================
+                // ALT + B → Farbschwäche-Filter durchschalten
+                // ==========================================
+                if (e.altKey && e.code === "KeyB") {
+                    e.preventDefault();
+
+                    const btn = document.querySelector(
+                        '.mhacc-feature-btn-select' +
+                        '[data-feature="blind_filters"]' +
+                        '[data-group="visuelle_module"]'
+                    );
+
+                    btn?.click();
+                    return;
+                }
+
+
+
+                // ==========================================
+                // ALT + T → Schrift größer
+                // ==========================================
+                if (e.altKey && e.code === "KeyT") {
+                    e.preventDefault();
+
+                    // Alle 3 Features synchron +
+                    this.triggerSlider("inhaltsmodule", "font_size", 10);
+                    this.triggerSlider("inhaltsmodule", "line_height", 10);
+                    this.triggerSlider("inhaltsmodule", "letter_spacing", 10);
+
+                    return;
+                }
+
+                // ==========================================
+                // ALT + G → Schrift kleiner
+                // ==========================================
+                if (e.altKey && e.code === "KeyG") {
+                    e.preventDefault();
+
+                    // Alle 3 Features synchron -
+                    this.triggerSlider("inhaltsmodule", "font_size", -10);
+                    this.triggerSlider("inhaltsmodule", "line_height", -10);
+                    this.triggerSlider("inhaltsmodule", "letter_spacing", -10);
+
+                    return;
+                }
+
+                
+
+
+                // -------------------------------
+                // SPRUNG ZU NÄCHSTEM ELEMENT (vorwärts/rückwärts)
+                // -------------------------------
+                const jumpMap = {
+                    "h": "h1,h2,h3,h4,h5,h6",
+                    "a": "a[href]",
+                    "l": "ul,ol",
+                    "b": "button",
+                    "f": "input,textarea,select",
+                    "i": "img"
+                };
+
+                const key = e.key.toLowerCase();
+                const selector = jumpMap[key];
+                if (!selector) return;
+
+                // --- Ignoriere Hotkeys, wenn gerade in einem Formularfeld getippt wird ---
+                const activeTag = document.activeElement.tagName.toLowerCase();
+                const typingFields = ["input", "textarea", "select"];
+                if (typingFields.includes(activeTag)) return;
+
+                e.preventDefault();
+
+                // Alle sichtbaren Elemente des Typs
+                const elements = Array.from(document.querySelectorAll(selector))
+                    .filter(el => el.offsetParent !== null);
+
+                if (!elements.length) return;
+
+                const current = document.activeElement;
+                let next = null;
+
+                // Prüfen, ob Shift gedrückt wurde → rückwärts
+                const backward = e.shiftKey;
+
+                // Iteration über Elemente je nach Richtung
+                if (!backward) {
+                    // Vorwärts: nächstes Element nach Fokus
+                    for (const el of elements) {
+                        if (current.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                            next = el;
+                            break;
+                        }
+                    }
+                } else {
+                    // Rückwärts: letztes Element vor Fokus
+                    for (let i = elements.length - 1; i >= 0; i--) {
+                        const el = elements[i];
+                        if (current.compareDocumentPosition(el) & Node.DOCUMENT_POSITION_PRECEDING) {
+                            next = el;
+                            break;
+                        }
+                    }
+                }
+
+                // Wrap-around, wenn nichts gefunden wird
+                if (!next) next = backward ? elements[elements.length - 1] : elements[0];
+
+                // Fokussierbar machen, falls nötig
+                const tag = next.tagName.toLowerCase();
+                if (!["a","button","input","select","textarea"].includes(tag)) {
+                    if (!next.hasAttribute("tabindex")) next.setAttribute("tabindex", "0");
+                }
+
+                // Scrollen + Fokus
+                next.scrollIntoView({ behavior: "smooth", block: "center" });
+                next.focus({ preventScroll: true });
+
+
+
+
+
+                // --------------------------------------------
+                // ESC → schließen
+                // --------------------------------------------
+                if (e.key === "Escape" && panel?.classList.contains("is-open")) {
+                    e.preventDefault();
+                    this.closePanel();
+                }
+
+            });
+        },
+
+        // ==========================
+        // PANEL NAVIGATION
+        // ==========================
+        bindPanelKeys() {
+            const panel = document.getElementById("mhacc-panel");
+            if (!panel) return;
+
+            panel.addEventListener("keydown", (e) => {
+
+                if (!this.isEnabled()) return;
+
+                const focusable = this.getFocusable(panel);
+                const current   = document.activeElement;
+                const index     = focusable.indexOf(current);
+
+                // ---- TAB FOCUS TRAP ----
+                if (e.key === "Tab") {
+                    if (e.shiftKey) {
+                        if (index === 0) {
+                            e.preventDefault();
+                            focusable[focusable.length - 1]?.focus();
+                        }
+                    } else {
+                        if (index === focusable.length - 1) {
+                            e.preventDefault();
+                            focusable[0]?.focus();
+                        }
+                    }
+                    return;
+                }
+
+                // ---- FEATURE BEDIENUNG ----
+                const btn = current.closest("[data-action]");
+                if (!btn) return;
+
+                const action = btn.dataset.action;
+
+                switch (action) {
+
+                    case "toggle_feature":
+                        if (["Enter", " "].includes(e.key)) {
+                            e.preventDefault();
+                            btn.click();
+                        }
+                        break;
+
+                    case "slider_change":
+                        this.handleSliderKeys(e, btn);
+                        break;
+
+                    case "cycle_select":
+                        if (["Enter", " "].includes(e.key)) {
+                            e.preventDefault();
+                            btn.click();
+                        }
+
+                        if (["ArrowRight", "ArrowLeft"].includes(e.key)) {
+                            e.preventDefault();
+                            btn.click();
+                        }
+                        break;
+                }
+
+            });
+        },
+
+        // ==========================
+        // SLIDER STEUERUNG
+        // ==========================
+        handleSliderKeys(e, btn) {
+
+            const wrapper = btn.closest(".mhacc-feature-btn-slider");
+            if (!wrapper) return;
+
+            const minus = wrapper.querySelector('[data-delta="-10"]');
+            const plus  = wrapper.querySelector('[data-delta="10"]');
+
+            switch (e.key) {
+
+                case "ArrowLeft":
+                case "ArrowDown":
+                    e.preventDefault();
+                    minus?.click();
+                    break;
+
+                case "ArrowRight":
+                case "ArrowUp":
+                    e.preventDefault();
+                    plus?.click();
+                    break;
+
+                case "Home":
+                    e.preventDefault();
+                    this.setSliderToMin(wrapper);
+                    break;
+
+                case "End":
+                    e.preventDefault();
+                    this.setSliderToMax(wrapper);
+                    break;
+            }
+        },
+
+        setSliderToMin(wrapper) {
+            const minus = wrapper.querySelector('[data-delta="-10"]');
+            for (let i = 0; i < 20; i++) minus?.click();
+        },
+
+        setSliderToMax(wrapper) {
+            const plus = wrapper.querySelector('[data-delta="10"]');
+            for (let i = 0; i < 20; i++) plus?.click();
+        },
+
+        // ==========================
+        // FOKUS MANAGEMENT
+        // ==========================
+        focusFirst() {
+            const panel = document.getElementById("mhacc-panel");
+            if (!panel) return;
+
+            const focusable = this.getFocusable(panel);
+            focusable[0]?.focus();
+        },
+
+        closePanel() {
+            const panel   = document.getElementById("mhacc-panel");
+            const trigger = document.getElementById("mhacc-trigger");
+
+            panel?.classList.remove("is-open");
+            trigger?.setAttribute("aria-expanded", "false");
+            trigger?.focus();
+        }
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // LIVE TRANSLATION
     MHACC.applyTranslations = function () {
 
         const panel = document.getElementById("mhacc-panel");
@@ -1238,6 +1863,58 @@
                 btn.setAttribute("title", label);
             }
         });
+
+
+
+        /* === Hotkeys in Help-Panel === */
+        const helpPanel = document.getElementById("mhacc-help-panel");
+        if (helpPanel) {
+            const tbody = helpPanel.querySelector("tbody");
+            if (tbody) {
+                tbody.innerHTML = "";
+                const hotkeys = MHACC.i18n.dict?.hotkeys || {};
+                const translateKey = k => {
+                    const map = { alt: "Alt", ctrl: "Strg", shift: "Shift", enter: "Enter", tab: "Tab", esc: "Esc", space: "Space" };
+                    return map[k.toLowerCase()] || k.toUpperCase();
+                };
+
+                if (!Object.keys(hotkeys).length) {
+                    const row = document.createElement("tr");
+                    const cell = document.createElement("td");
+                    cell.colSpan = 2;
+                    cell.textContent = MHACC.i18n.t("no_shortcuts","No shortcuts defined for this language.");
+                    row.appendChild(cell);
+                    tbody.appendChild(row);
+                } else {
+                    for (const [shortcut, description] of Object.entries(hotkeys)) {
+                        const row = document.createElement("tr");
+                        const keyCell = document.createElement("td");
+                        const descCell = document.createElement("td");
+
+                        const keys = shortcut.split("_").map(translateKey);
+                        keyCell.innerHTML = keys.map(k => `<kbd>${k}</kbd>`).join(" + ");
+
+                        descCell.textContent = description;
+
+                        row.appendChild(keyCell);
+                        row.appendChild(descCell);
+                        tbody.appendChild(row);
+                    }
+                }
+
+                // Überschriften im Help-Panel
+                const header = helpPanel.querySelector("#mhacc-help-header h2");
+                if (header) {
+                    header.textContent = MHACC.i18n.t("shortcuttitle","Shortcuts");
+                }
+                const thead = helpPanel.querySelector("thead");
+                if (thead) {
+                    thead.querySelectorAll("th")[0].textContent = MHACC.i18n.t("shortcut","Shortcut");
+                    thead.querySelectorAll("th")[1].textContent = MHACC.i18n.t("description","Beschreibung");
+                }
+            }
+        }
+
 
         /* === aktuelle Sprache im Header === */
         const langLabel = panel.querySelector(".mhacc-lang-label");
@@ -1320,6 +1997,7 @@
                         btn.dataset.group = group.id;
                         btn.role = "button";
                         btn.ariaLabel = feature.label || key;
+                        btn.setAttribute("aria-pressed", feature.value ? "true" : "false");
                         btn.title = feature.label || key;
                         
                         if (feature.value) {
@@ -1385,6 +2063,7 @@
 
                         // Value-Span
                         const valueSpan = document.createElement("span");
+                        valueSpan.setAttribute("aria-live", "polite");
                         valueSpan.classList.add("mhacc-slider-value");
 
                         // Minus-Button

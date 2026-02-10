@@ -602,7 +602,7 @@
 }
 
 .mhacc-slider-btn:focus {
-    outline: 3px solid rgba(255, 255, 255, 0.25);
+    outline: var(--mhacc_primarycolor) solid 3px;
     outline-offset: 3px;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
 }
@@ -1118,3 +1118,123 @@ body.mhacc--readable_font * {
 }
 
 
+
+
+
+
+
+
+#mhacc-help-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+    padding: 20px;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    display: none;
+    z-index: 9999999;
+    overflow: hidden; /* verhindert, dass der ganze Panel scrollt */
+    display: flex;
+    flex-direction: column;
+}
+
+#mhacc-help-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mhacc-help-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+#mhacc-help-close {
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    color: #333;
+    transition: color 0.2s;
+}
+#mhacc-help-close svg {
+  width: 24px;
+  height: 24px;
+}
+#mhacc-help-close:hover {
+    color: #0073e6;
+}
+
+#mhacc-help-table-wrap {
+    overflow-y: auto;
+    flex: 1; /* füllt den restlichen Panel-Bereich */
+}
+
+#mhacc-help-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#mhacc-help-table th,
+#mhacc-help-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#mhacc-help-table th {
+    background-color: #f7f7f7;
+    font-weight: 600;
+}
+
+#mhacc-help-table td kbd {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--mhacc_fontcolor);
+    background-color: var(--mhacc_primarycolor);
+    border-radius: 4px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.2);
+}
+.mhacc-help-notice {
+    padding: 10px 12px;
+    margin: 8px 0;
+    font-size: 13px;
+    border-radius: 6px;
+    background: rgba(0,0,0,.05);
+}
+
+.mhacc-help-notice kbd {
+    background: #eee;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+@media (max-width: 480px) {
+    #mhacc-help-panel {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #mhacc-help-header h2 {
+        font-size: 1.1rem;
+    }
+
+    #mhacc-help-table th,
+    #mhacc-help-table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

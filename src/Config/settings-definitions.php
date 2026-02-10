@@ -741,6 +741,18 @@ return [
                 'isactive' => 1,
                 'pro' => false,
             ],
+
+            [
+                'type' => 'toggle',
+                'jstype' => 'toggle',
+                'name' => 'keyboard_navigation',
+                'label' => __('Keyboard-Navigation', 'accessibility-mh'),
+                'description' => __('Keyboard-Navigation', 'accessibility-mh'),
+                'icon' => $mhacc_icons['icon-readablefont'] ?? '',
+                'isactive' => 1,
+                'pro' => false,
+            ],
+
         ],
     ],
 

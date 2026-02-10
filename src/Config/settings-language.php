@@ -59,6 +59,55 @@ return [
             'reading_mask' => "Reading Mask",
             'stop_animations' => "Stop Animations",
             'hide_images' => "Hide Images",
+          
+            'keyboard_navigation' => "Keyboard-Navigation",
+
+            // Keyboard
+            'shortcuttitle' => 'Keyboard Navigation',
+
+            'shortcutnote_active' => 'Tastatur navigation is currently <strong>active</strong>. Shortcuts can be used.',
+            'shortcutnote_inactive' => 'These keyboard shortcuts only work when <strong>keyboard navigation is enabled</strong> (<kbd>Alt</kbd> + <kbd>K</kbd>).',
+
+            'shortcut' => 'Shortcut',
+            'description' => 'Description',
+            'no_shortcuts' => 'No shortcuts defined for this language.',
+            'hotkeys' => [
+              'alt_k' => 'Keyboard Navigation',
+              'alt_9' => 'Open Help / Info',
+              'ctrl_shift_a' => 'Focus Widget',
+              'alt_s' => 'Skip to Content',
+              'alt_n' => 'Navigation',
+              'alt_arrow' => 'Forward / Back in Text',
+              'alt_0' => 'Reset All Settings',
+              'alt_1' => 'Open Accessibility Widget',
+              'alt_h' => 'Highlight Titles',
+              'alt_l' => 'Highlight Links',
+              'alt_v' => 'Stop Video Autoplay',
+              'alt_f' => 'Focus Highlight',
+              'alt_p' => 'Start / Stop Text-to-Speech',
+              'alt_c' => 'Contrast Mode',
+              'alt_d' => 'Dark Mode',
+              'alt_i' => 'Hide Images',
+              'alt_o' => 'Stop Animations',
+              'alt_t' => 'Increase Font Size',
+              'alt_g' => 'Decrease Font Size',
+              'alt_b' => 'Color Blind Filters',
+              'alt_r' => 'Reading Line',
+              'h' => 'Next Heading',
+              'shift_h' => 'Previous Heading',
+              'a' => 'Next Link',
+              'shift_a' => 'Previous Link',
+              'l' => 'Next List',
+              'shift_l' => 'Previous List',
+              'b' => 'Next Button',
+              'shift_b' => 'Previous Button',
+              'f' => 'Next Input Field',
+              'shift_f' => 'Previous Input Field',
+              'i' => 'Next Image',
+              'shift_i' => 'Previous Image',
+            ]
+            // Keyboard
+
         ],
     ],
 
@@ -117,6 +166,56 @@ return [
           'reading_mask' => "Lesemaske",
           'stop_animations' => "Animationen stoppen",
           'hide_images' => "Bilder ausblenden",
+
+          'keyboard_navigation' => "Tastaturnavigation",
+
+          // Keyboard
+          'shortcuttitle' => 'Tastaturnavigation',
+          
+          'shortcutnote_active' => 'Tastaturnavigation ist aktuell <strong>aktiv</strong>. Shortcuts können verwendet werden.',
+          'shortcutnote_inactive' => 'Diese Tastaturbefehle funktionieren nur, wenn die <strong>Tastaturnavigation aktiviert</strong> ist (<kbd>Alt</kbd> + <kbd>K</kbd>).',
+
+          'shortcut' => 'Shortcut',
+          'description' => 'Beschreibung',
+          'no_shortcuts' => 'Für diese Sprache sind keine Shortcuts definiert.',
+          'hotkeys' => [
+              'alt_k' => 'Tastaturnavigation',
+              'alt_9' => 'Hilfe / Info öffnen',
+              'ctrl_shift_a' => 'Fokus auf Widget',
+              'alt_s' => 'Zum Inhalt springen',
+              'alt_n' => 'Navigation',
+              'alt_arrow' => 'Vor / Zurück im Text',
+              'alt_0' => 'Alle Einstellungen zurücksetzen',
+              'alt_1' => 'Accessibility-Widget öffnen',
+              'alt_h' => 'Überschriften hervorheben',
+              'alt_l' => 'Links hervorheben',
+              'alt_v' => 'Video-Autoplay stoppen',
+              'alt_f' => 'Fokus-Hervorhebung',
+              'alt_p' => 'Text vorlesen Start / Stop',
+              'alt_c' => 'Kontrastmodus',
+              'alt_d' => 'Dunkler Modus',
+              'alt_i' => 'Bilder ausblenden',
+              'alt_o' => 'Animationen stoppen',
+              'alt_t' => 'Schriftgröße erhöhen',
+              'alt_g' => 'Schriftgröße verringern',
+              'alt_b' => 'Farbschwäche-Filter',
+              'alt_r' => 'Leselinie',
+              'h' => 'Nächste Überschrift',
+              'shift_h' => 'Vorherige Überschrift',
+              'a' => 'Nächster Link',
+              'shift_a' => 'Vorheriger Link',
+              'l' => 'Nächste Liste',
+              'shift_l' => 'Vorherige Liste',
+              'b' => 'Nächster Button',
+              'shift_b' => 'Vorheriger Button',
+              'f' => 'Nächstes Eingabefeld',
+              'shift_f' => 'Vorheriges Eingabefeld',
+              'i' => 'Nächstes Bild',
+              'shift_i' => 'Vorheriges Bild',
+          ]
+          // Keyboard
+
+
         ],
     ]
 
