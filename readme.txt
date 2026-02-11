@@ -1,16 +1,16 @@
-=== Accessibility MH ===
-Contributors: rudizi
+=== MH-Accessibility ===
+Contributors: rudizir
 Tags: accessibility, ada, wcag, bfsg, widget
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
-MH Accessibility Widget adds a customizable accessibility toolbar, empowering users with visual, cognitive, and motor impairments.
+MH-Accessibility adds a customizable accessibility toolbar, empowering users with visual, cognitive, and motor impairments.
 
 
 == Features ==
@@ -48,7 +48,7 @@ MH Accessibility Widget adds a customizable accessibility toolbar, empowering us
 
 1. Upload the Plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the *Plugins* screen in WordPress.
-3. Navigate to *Settings → MH Accessibility* to configure widget settings.
+3. Navigate to *Settings → MH-Accessibility* to configure widget settings.
 
 
 == Frequently Asked Questions ==
@@ -63,10 +63,7 @@ Yes — the plugin supports language detection and displays appropriate localize
 Yes — you can customize widget style, colors, position, icons, and more to match your site’s design.
 
 = Does the plugin work with my theme? =
-Yes, Accessibility Pro is compatible with all modern WordPress themes. It also works with page builders such as Elementor and Divi without any problems.
-
-= Can I upgrade from the free version? =
-Of course. You can upgrade from the free version to the Pro version at any time. Your settings will be preserved.
+Yes, MH-Accessibility is compatible with all modern WordPress themes. It also works with page builders such as Elementor and Divi without any problems.
 
 = Is the plugin GDPR compliant? =
 Yes, MH-Accessibility is fully GDPR compliant. It does not store any personal data and respects the privacy of your users.
@@ -88,9 +85,13 @@ No, not at all. The plugin is designed for beginners. All settings are self-expl
 2. Accessibility settings panel
 3. Frontend widget (grid view)
 4. Frontend widget (list view)
+5. Keyboard-Navigation
 
 
 == Changelog ==
+= 1.6.1 (Feb 11, 2026) =
+- bugfixing Keyboard Navigation
+
 = 1.6.0 (Feb 10, 2026) =
 - add Keyboard Navigation
 
@@ -134,11 +135,11 @@ No, not at all. The plugin is designed for beginners. All settings are self-expl
 == Upgrade Notice ==
 
 = 1.5.0 =
-First official release of MH Accessibility Widget.
+First official release of MH-Accessibility.
 
 == License ==
 
-MH Accessibility Widget is licensed under the GPLv2 or later.
+MH-Accessibility is licensed under the GPLv2 or later.
 
 == Acknowledgements ==
 

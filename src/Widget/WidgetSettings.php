@@ -22,10 +22,6 @@ class WidgetSettings
         $jssettings      = [];
         foreach ($groups as $group) {
             
-            // Pro-Logik für die Gruppe
-            if (!empty($group['pro']) && (!defined('MHACC_WIDGET_PRO_ACTIVE') || !MHACC_WIDGET_PRO_ACTIVE)) {
-                continue; // Ganze Gruppe überspringen, wenn Pro nicht aktiv
-            }
 
             if ( ($group['type'] ?? '') !== 'feature' ) {
                 continue;
@@ -37,7 +33,6 @@ class WidgetSettings
                 'id'          => $group['id'],
                 'title'       => $group['title'] ?? '',
                 'description' => $group['description'] ?? '',
-                'pro'         => !empty($group['pro']),
                 'fields'      => [],
             ];
 
@@ -48,10 +43,6 @@ class WidgetSettings
                 // Wert: gespeichert → isactive → null
                 $value = $stored[$name] ?? ($field['isactive'] ?? null);
 
-                // PRO-Logik: Feld Pro-only
-                if (!empty($field['pro']) && (!defined('MHACC_WIDGET_PRO_ACTIVE') || !MHACC_WIDGET_PRO_ACTIVE)) {
-                    continue;
-                }
 
                 // Nur aktive Features ins JS
                 if (!$value) {
@@ -65,7 +56,6 @@ class WidgetSettings
                     'icon'       => $field['icon'] ?? '',
                     'jsdefault'  => $field['jsdefault'] ?? '',
                     'jsoptions'  => $field['jsoptions'] ?? '',
-                    'pro'        => !empty($field['pro']),
                 ];
 
         
@@ -94,10 +84,7 @@ class WidgetSettings
                 $name = $field['name'];
                 // Wert: gespeichert → default → null
                 $value = $stored[$name] ?? ($field['default'] ?? null);
-                // Pro-Feld sperren
-                if (!empty($field['pro']) && (!defined('MHACC_WIDGET_PRO_ACTIVE') || !MHACC_WIDGET_PRO_ACTIVE)) {
-                    continue;
-                }
+
                 $jsdesign[$group_id]['fields'][$name] = [
                     'name'      => $name,
                     'value'     => $value,

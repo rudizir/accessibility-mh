@@ -1,16 +1,16 @@
-# MH Accessibility Widget
+# MH-Accessibility
 
 A powerful and customizable accessibility widget for WordPress that helps improve usability and inclusivity for all users — including people with visual, cognitive, motor, and neurological impairments.
 
 🔗 Website: https://mh-accessibility.de  
-📦 WordPress Plugin: MH Accessibility Widget  
+📦 WordPress Plugin: MH-Accessibility  
 📜 License: GPLv2 or later
 
 ---
 
 ## ✨ Overview
 
-**MH Accessibility Widget** adds an intuitive accessibility toolbar to your WordPress website.  
+**MH-Accessibility** adds an intuitive accessibility toolbar to your WordPress website.  
 It allows visitors to adapt the site to their individual needs by adjusting text, contrast, navigation behavior, and more — aligned with WCAG recommendations and accessibility best practices.
 
 ---
@@ -56,6 +56,6 @@ It allows visitors to adapt the site to their individual needs by adjusting text
 
 ### Via WordPress Admin
 1. Upload the plugin ZIP or install it via the WordPress plugin directory.
-2. Activate **MH Accessibility**.
-3. Go to **Settings → Accessibility MH** to configure the widget.
+2. Activate **MH-Accessibility**.
+3. Go to **Settings → MH-Accessibility** to configure the widget.
 

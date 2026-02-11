@@ -141,6 +141,8 @@ body.dark .mhacc-nav-item:hover {
     }
 }
 
+
+
 .wp-core-ui .button-primary:hover {
     background: var(--mhacc-primary);
     border-color: var(--mhacc-primary);
@@ -287,6 +289,19 @@ body.light .mhacc-header {
 }
 
 
+.mhacc-theme-switcher {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#mhacc_getpro {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    background: var(--mhacc-primary);
+    font-weight: 500;
+    color: #ffffff;
+}
 
 
 
@@ -304,7 +319,8 @@ body.light .mhacc-header {
 .mhacc-dropdown {
     display: none;
     position: absolute;
-    right: 20px;
+    left: 0px;
+    top:36px;
     flex-direction: column;
     padding: 10px;
     gap: 10px;

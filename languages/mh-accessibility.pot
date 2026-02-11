@@ -1,9 +1,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: MH Accessibility\n"
+"Project-Id-Version: MH-Accessibility\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-27 22:24+0000\n"
+"POT-Creation-Date: 2026-02-11 14:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.1; wp-6.9; php-8.4.14\n"
-"X-Domain: accessibility-mh"
+"X-Domain: mh-accessibility"
 
 #: src/Config/settings-definitions.php:34
 msgid "Accessibility Statement Link"
@@ -22,8 +22,8 @@ msgstr ""
 
 #. Description of the plugin
 msgid ""
-"Adds a customisable Free Accessibility widget to the website and enables "
-"various accessibility features."
+"Adds a customisable Accessibility widget to the website and enables various "
+"accessibility features."
 msgstr ""
 
 #: src/Config/settings-definitions.php:561
@@ -44,10 +44,6 @@ msgstr ""
 
 #: src/Config/settings-definitions.php:670
 msgid "Adjusts color saturation"
-msgstr ""
-
-#: src/Admin/AdminHeader.php:27 src/Admin/Admin.php:63 src/Admin/Admin.php:64
-msgid "Analyser"
 msgstr ""
 
 #: src/Config/settings-definitions.php:83
@@ -110,7 +106,7 @@ msgstr ""
 msgid "Customize the appearance of the widget."
 msgstr ""
 
-#: src/Admin/AdminHeader.php:106
+#: src/Admin/AdminHeader.php:74
 msgid "Dark"
 msgstr ""
 
@@ -215,11 +211,14 @@ msgid "Horizontal reading guide"
 msgstr ""
 
 #. URI of the plugin
-#. Author URI of the plugin
-msgid "https://www.mh-accessibility.de/"
+msgid "https://mh-accessibility.de/"
 msgstr ""
 
-#: src/Admin/AdminFooter.php:38
+#. Author URI of the plugin
+msgid "https://mh-accessibility.de/about-us"
+msgstr ""
+
+#: src/Admin/AdminFooter.php:39
 msgid "If you like MH Accessibility, please give us a"
 msgstr ""
 
@@ -255,6 +254,11 @@ msgstr ""
 msgid "Japanese"
 msgstr ""
 
+#: src/Config/settings-definitions.php:749
+#: src/Config/settings-definitions.php:750
+msgid "Keyboard-Navigation"
+msgstr ""
+
 #: src/Config/settings-definitions.php:45
 msgid "Language"
 msgstr ""
@@ -276,7 +280,7 @@ msgstr ""
 msgid "Letter Spacing"
 msgstr ""
 
-#: src/Admin/AdminHeader.php:102
+#: src/Admin/AdminHeader.php:70
 msgid "Light"
 msgstr ""
 
@@ -298,14 +302,14 @@ msgid "Medium"
 msgstr ""
 
 #. Name of the plugin
-msgid "MH Accessibility"
+msgid "MH-Accessibility"
 msgstr ""
 
 #. Author of the plugin
-msgid "MH-ACCESSIBILITY"
+msgid "MH-Accessibility Team"
 msgstr ""
 
-#: src/Admin/AdminHeader.php:15 src/Admin/Admin.php:42 src/Admin/Admin.php:43
+#: src/Admin/AdminHeader.php:16 src/Admin/Admin.php:43 src/Admin/Admin.php:44
 msgid "Modules"
 msgstr ""
 
@@ -406,10 +410,6 @@ msgstr ""
 msgid "Square"
 msgstr ""
 
-#: src/Admin/AdminHeader.php:23 src/Admin/Admin.php:54 src/Admin/Admin.php:55
-msgid "Statement"
-msgstr ""
-
 #: src/Config/settings-definitions.php:727
 msgid "Stop Animations"
 msgstr ""
@@ -438,18 +438,12 @@ msgstr ""
 msgid "Text-to-Speech"
 msgstr ""
 
-#: src/Admin/AdminFooter.php:40
+#: src/Admin/AdminFooter.php:41
 msgid "Thank you in advance."
 msgstr ""
 
-#: src/Settings/SettingsRenderer.php:44
+#: src/Settings/SettingsRenderer.php:45
 msgid "These features are only available in the Pro version."
-msgstr ""
-
-#: src/Admin/Admin.php:154
-msgid ""
-"This is a pro feature. Please upgrade to MH-ACCESSIBILITY Pro to use this "
-"feature"
 msgstr ""
 
 #: src/Config/settings-definitions.php:246
@@ -480,10 +474,6 @@ msgstr ""
 msgid "Turkish"
 msgstr ""
 
-#: src/Admin/Admin.php:159
-msgid "Upgrade To Pro"
-msgstr ""
-
 #: src/Config/settings-definitions.php:35
 msgid "URL to the official accessibility statement of your website."
 msgstr ""
@@ -492,7 +482,8 @@ msgstr ""
 msgid "Uses an easy-to-read font"
 msgstr ""
 
-#: src/Admin/AdminFooter.php:53
+#. %s: plugin version number
+#: src/Admin/AdminFooter.php:56
 #, php-format
 msgid "Version %s"
 msgstr ""
@@ -513,7 +504,7 @@ msgstr ""
 msgid "Visual style of the widget"
 msgstr ""
 
-#: src/Admin/AdminHeader.php:11 src/Admin/Admin.php:33 src/Admin/Admin.php:34
+#: src/Admin/AdminHeader.php:12 src/Admin/Admin.php:34 src/Admin/Admin.php:35
 msgid "Welcome"
 msgstr ""
 

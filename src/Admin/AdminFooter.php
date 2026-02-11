@@ -36,9 +36,9 @@ class AdminFooter
             '<span id="footer-thankyou">
                 %s <a href="%s" target="_blank" rel="noopener noreferrer" class="mhacc-rating-link" aria-label="five stars">★★★★★</a>. 
             </span>',
-            esc_html__('If you like MH Accessibility, please give us a', 'accessibility-mh'),
+            esc_html__('If you like MH Accessibility, please give us a', 'mh-accessibility'),
             esc_url(MHACC_LINK_TO_RATINGS)
-        ) . ' ' . esc_html__('Thank you in advance.', 'accessibility-mh');
+        ) . ' ' . esc_html__('Thank you in advance.', 'mh-accessibility');
         
     }
 
@@ -53,7 +53,7 @@ class AdminFooter
 
         return sprintf(
             /* translators: %s: plugin version number */
-            esc_html__('Version %s', 'accessibility-mh'),
+            esc_html__('MH-Accessibility Version %s', 'mh-accessibility'),
             esc_html(MHACC_VERSION)
         );
     }

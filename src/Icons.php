@@ -30,9 +30,6 @@ function mhacc_load_icons(): array {
         $mhacc_icons[$key] = $svg;
     }
 
-    /**
-     * 🔌 Pro / Add-ons können Icons ergänzen oder überschreiben
-     */
     $cache = apply_filters('mhacc_widget_icons', $mhacc_icons);
 
     return $cache;

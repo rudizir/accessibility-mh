@@ -51,7 +51,6 @@ class Widget
                     'icons'    => mhacc_load_icons(),
                     'languages' => $languages,
                     'lang'      => $settings['widget_language'] ?? 'en',
-                    'isPro'    => defined('MHACC_WIDGET_PRO_ACTIVE') && MHACC_WIDGET_PRO_ACTIVE,
                 ]
             );
 

@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Accessibility MH
+ * Plugin Name: MH-Accessibility
  * Plugin URI: https://mh-accessibility.de/
  * Description: Adds a customisable Accessibility widget to the website and enables various accessibility features.
- * Version: 1.6.0
- * Author: MH-ACCESSIBILITY Team
+ * Version: 1.6.1
+ * Author: MH-Accessibility Team
  * Author URI: https://mh-accessibility.de/about-us
- * Text Domain: accessibility-mh
+ * Text Domain: mh-accessibility
  * Domain Path: /languages
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,11 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define( 'MHACC_WIDGET_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MHACC_WIDGET_URL', plugin_dir_url( __FILE__ ) );
-define( 'MHACC_LINK_TO_PRO', 'https://mh-accessibility.de/preise/');
-
 define( 'MHACC_LINK_TO_RATINGS', 'https://mh-accessibility.de/');
 
-define( 'MHACC_VERSION', '1.6.0');
+define( 'MHACC_VERSION', '1.6.1');
 
 
 
@@ -134,7 +132,6 @@ function mhacc_get_admin_theme_mode(): string {
 add_filter('admin_body_class', function ($classes) {
     $mode = mhacc_get_admin_theme_mode();
 
-    // alte Klassen sicher entfernen
     $classes = preg_replace('/\b(light|dark)\b/', '', $classes);
 
     $classes .= ' ' . esc_attr($mode);

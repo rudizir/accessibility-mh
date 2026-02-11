@@ -7,12 +7,10 @@ class SettingsRenderer
 
     private array $groups;
     private array $values;
-    private bool $is_pro;
 
     public function __construct(array $groups, array $values) {
         $this->groups = $groups;
         $this->values = $values;
-        $this->is_pro = defined('MHACC_WIDGET_PRO_ACTIVE') && MHACC_WIDGET_PRO_ACTIVE;
     }
 
     
@@ -25,26 +23,16 @@ class SettingsRenderer
     }
 
     private function render_group(array $group) {
-        $is_pro_group = isset($group['pro']) && $group['pro'] === true;
-        $group_disabled = $is_pro_group && !$this->is_pro;
         ?>
         <div class="mhacc-group boxed" id="<?php echo esc_attr($group['id']); ?>">
             <h2>
                 <?php echo esc_html($group['title']); ?>
-                <?php if ($is_pro_group): ?>
-                    <span class="pro-badge">PRO</span>
-                <?php endif; ?>
             </h2>
 
             <?php if (!empty($group['description'])): ?>
                 <p class="description"><?php echo esc_html($group['description']); ?></p>
             <?php endif; ?>
 
-            <?php if ($group_disabled): ?>
-                <p class="description">
-                    🔒 <?php echo esc_html__('These features are only available in the Pro version.', 'accessibility-mh'); ?>
-                </p>
-            <?php endif; ?>
 
             <table class="form-table">
                 <tbody>
@@ -60,8 +48,6 @@ class SettingsRenderer
     }
 
     private function render_field(array $field) {
-        $is_pro = isset($field['pro']) && $field['pro'] === true;
-        $disabled = $is_pro && !$this->is_pro;
 
         $value = $this->values[$field['name']] ?? ($field['default'] ?? '');
 
@@ -72,7 +58,7 @@ class SettingsRenderer
 					<div class="mhacc-icon">
 						<?php
 						echo wp_kses(
-							$field['icon'],
+							$field['icon'] ?? '',
                             array(
                                 'svg' => array(
                                     'xmlns' => true,
@@ -104,10 +90,14 @@ class SettingsRenderer
                                     'height' => true,
                                     'rx' => true,
                                     'fill' => true,
+                                    'stroke' => true,
                                 ),
                                 'g' => array(
                                     'fill' => true,
                                     'stroke' => true,
+                                    'stroke-width' => true,
+                                    'stroke-linecap' => true,
+                                    'stroke-linejoin' => true,
                                 ),
                             )
 						);
@@ -117,7 +107,6 @@ class SettingsRenderer
                     <div>
                         <p class="option_label">
                             <?php echo esc_html($field['label']); ?>
-                            <?php if ($is_pro): ?><span class="pro-badge">PRO</span><?php endif; ?>
                         </p>
                         <?php if (!empty($field['description'])): ?>
                             <p class="description"><?php echo esc_html($field['description']); ?></p>
@@ -136,8 +125,7 @@ class SettingsRenderer
                                    class="mhacc-checkbox-input"
                                    name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                    value="1"
-                                   <?php checked($value, 1); ?>
-                                   <?php disabled($disabled); ?>>
+                                   <?php checked($value, 1); ?>>
                             <
                         </label>
                         <?php
@@ -151,8 +139,7 @@ class SettingsRenderer
                                    class="mhacc-toggle-input"
                                    name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                    value="1"
-                                   <?php checked($value, 1); ?>
-                                   <?php disabled($disabled); ?>>
+                                   <?php checked($value, 1); ?>>
                             <span class="mhacc-toggle-slider"></span>
                         </label>
                         <?php
@@ -164,24 +151,21 @@ class SettingsRenderer
                             <?php foreach ($field['options'] as $key => $option): ?>
 
                                 <?php
-                                $option_is_pro = !empty($option['pro']);
-                                $option_disabled = $option_is_pro && !$this->is_pro;
                                 $is_active = ((string)$value === (string)$key);
                                 ?>
 
-                                <label class="mhacc-icon-radio <?php echo $is_active ? 'is-active' : ''; ?> <?php echo $option_disabled ? 'is-disabled' : ''; ?>">
+                                <label class="mhacc-icon-radio <?php echo $is_active ? 'is-active' : ''; ?> ">
 
                                     <input type="radio"
                                         name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                         value="<?php echo esc_attr($key); ?>"
                                         <?php checked($is_active); ?>
-                                        <?php disabled($option_disabled); ?>
                                     >
 
 									<span class="mhacc-icon-radio-icon">
 										<?php
 										echo wp_kses(
-											$option['icon'],
+											$option['icon'] ?? '',
                                             array(
                                                 'svg' => array(
                                                     'xmlns' => true,
@@ -213,18 +197,19 @@ class SettingsRenderer
                                                     'height' => true,
                                                     'rx' => true,
                                                     'fill' => true,
+                                                    'stroke' => true,
                                                 ),
                                                 'g' => array(
                                                     'fill' => true,
                                                     'stroke' => true,
+                                                    'stroke-width' => true,
+                                                    'stroke-linecap' => true,
+                                                    'stroke-linejoin' => true,
                                                 ),
                                             )
 										);
 										?>
 									</span>
-                                    <?php if ($option_is_pro): ?>
-                                        <span class="pro-badge">PRO</span>
-                                    <?php endif; ?>
 
                                 </label>
 
@@ -290,7 +275,6 @@ class SettingsRenderer
                             class="regular-text mhacc-number-input"
                             name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                             value="<?php echo esc_attr($value); ?>"
-                            <?php if ($field['pro'] && !$this->is_pro) echo 'disabled'; ?>
                         >
                         <?php
                     break;
@@ -308,14 +292,12 @@ class SettingsRenderer
                                 class="mhacc-color-input"
                                 name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                 value="<?php echo esc_attr($current); ?>"
-                                placeholder="#000000"
-                                <?php disabled($disabled); ?>>
+                                placeholder="#000000">
 
                             <!-- Native Color Picker -->
                             <input type="color"
                                 class="mhacc-color-picker"
-                                value="<?php echo esc_attr($current); ?>"
-                                <?php disabled($disabled); ?>>
+                                value="<?php echo esc_attr($current); ?>">
 
                             <?php if (!empty($field['options']) && is_array($field['options'])): ?>
                                 <div class="mhacc-color-options">
@@ -324,8 +306,7 @@ class SettingsRenderer
                                             <input type="radio"
                                                 name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                                 value="<?php echo esc_attr($color); ?>"
-                                                <?php checked($current, $color); ?>
-                                                <?php disabled($disabled); ?>>
+                                                <?php checked($current, $color); ?>>
 
                                             <span class="mhacc-color-circle"
                                                 style="background-color: <?php echo esc_attr($color); ?>"
@@ -347,19 +328,13 @@ class SettingsRenderer
 
                     case 'select':
                         ?>
-                        <select name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]" <?php disabled($disabled); ?>>
+                        <select name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]">
 
                             <?php foreach ($field['options'] as $k => $opt): 
-                                // Prüfen, ob Option ein Array (mit 'value' und evtl. 'pro') oder einfach ein String ist
                                 $opt_value = is_array($opt) ? ($opt['value'] ?? '') : $opt;
-                                $opt_pro   = is_array($opt) && !empty($opt['pro']);
-                                $disabled_option = $opt_pro && !$this->is_pro;
                             ?>
-                                <option value="<?php echo esc_attr($k); ?>"
-                                    <?php selected($value, $k); ?>
-                                    <?php disabled($disabled_option); ?>>
+                                <option value="<?php echo esc_attr($k); ?>" <?php selected($value, $k); ?>>
                                     <?php echo esc_html($opt_value); ?>
-                                    <?php if ($disabled_option) echo ' (PRO)'; ?>
                                 </option>
                             <?php endforeach; ?>
 
@@ -373,8 +348,7 @@ class SettingsRenderer
                                class="regular-text"
                                name="mhacc_settings[<?php echo esc_attr($field['name']); ?>]"
                                value="<?php echo esc_attr($value); ?>"
-                               placeholder="<?php echo esc_attr($field['placeholder'] ?? ''); ?>"
-                               <?php disabled($disabled); ?>>
+                               placeholder="<?php echo esc_attr($field['placeholder'] ?? ''); ?>">
                         <?php
                         break;
                 }

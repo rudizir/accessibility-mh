@@ -31,13 +31,11 @@
         config: window.MHACC_WIDGET_CONFIG || {},
         design: {},
         features: {},
-        pro: false,
 
         /**
          * Init-Pipeline
          */
         init() {
-            this.detectPro();
             this.loadDesign();
             this.loadFeatures();
             this.loadUIState();
@@ -55,11 +53,6 @@
 
             this.keyboard.init();
         },
-
-        detectPro() {
-            this.pro = !!this.config.isPro;
-        },
-
         loadDesign() {
             this.design = this.config.settings?.design || {};
             //console.log("[MHACC] Design geladen:", this.design);
@@ -447,7 +440,7 @@
                             Number(MHACC?.design?.widget_design?.fields?.remove_branding?.value) !== 1
                                 ? `
                                     <span id="powered_by_text">
-                                        <a href="https://www.mh-accessibility.de" target="_blank" rel="noopener">
+                                        <a href="https://mh-accessibility.de" target="_blank" rel="noopener">
                                             MH-ACCESSIBILITY.DE
                                         </a>
                                     </span>

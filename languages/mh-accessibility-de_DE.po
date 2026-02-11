@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MH Accessibility\n"
+"Project-Id-Version: MH-Accessibility\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-01-27 22:03+0000\n"
 "PO-Revision-Date: 2026-01-27 22:26+0000\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.1; wp-6.9; php-8.4.14\n"
-"X-Domain: accessibility-mh"
+"X-Domain: mh-accessibility"
 
 #: src/Config/settings-definitions.php:34
 msgid "Accessibility Statement Link"
