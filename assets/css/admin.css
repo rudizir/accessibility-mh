@@ -260,40 +260,31 @@ body.light .mhacc-header {
     height: 40px;
 }
 
+
+
+
+
+
+
 /* ================================
    THEME SWITCHER
 ================================ */
-
-.mhacc-theme-switcher button {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: flex;
-    gap: 6px;
-    background: transparent;
-    border: none;
-}
-
-.mhacc-theme-switcher .mhacc-dropdown-trigger button {
-    margin-left: 8px;
-    background-color: transparent;
-    border: none;
-}
-
-.mhacc-theme-switcher button.active {
-    font-weight: bold;
-    border-bottom: 2px solid var(--mhacc-primary);
-}
-
-.mhacc-theme-switcher:hover .mhacc-dropdown {
-    display: flex;
-}
-
 
 .mhacc-theme-switcher {
   display: flex;
   align-items: center;
   position: relative;
+  gap:6px;
 }
+
+.mhacc-theme-switcher button {
+    padding: 5px 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+
 #mhacc_getpro {
     padding: 8px 14px;
     text-decoration: none;
