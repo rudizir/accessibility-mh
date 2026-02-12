@@ -3,7 +3,7 @@
  * Plugin Name: MH-Accessibility
  * Plugin URI: https://mh-accessibility.de/
  * Description: Adds a customisable Accessibility widget to the website and enables various accessibility features.
- * Version: 1.6.1
+ * Version: 1.6.2
  * Author: MH-Accessibility Team
  * Author URI: https://mh-accessibility.de/about-us
  * Text Domain: mh-accessibility
@@ -21,7 +21,7 @@ define( 'MHACC_WIDGET_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MHACC_WIDGET_URL', plugin_dir_url( __FILE__ ) );
 define( 'MHACC_LINK_TO_RATINGS', 'https://mh-accessibility.de/');
 
-define( 'MHACC_VERSION', '1.6.1');
+define( 'MHACC_VERSION', '1.6.2');
 
 
 
