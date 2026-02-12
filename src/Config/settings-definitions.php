@@ -140,11 +140,11 @@ return [
             ],
 
 
-            'remove_branding' => [
+            'show_branding' => [
                 'type' => 'toggle',
-                'name' => 'remove_branding',
-                'label' => __('Remove Branding', 'mh-accessibility'),
-                'description' => __('Removes branding from the widget', 'mh-accessibility'),
+                'name' => 'show_branding',
+                'label' => __('Show Branding', 'mh-accessibility'),
+                'description' => __('Show branding from the widget', 'mh-accessibility'),
                 'icon' => '',
                 'isactive' => 0,
             ],

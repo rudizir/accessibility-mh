@@ -437,9 +437,9 @@
                             : ''
                         }
                         ${
-                            Number(MHACC?.design?.widget_design?.fields?.remove_branding?.value) !== 1
+                            Number(MHACC?.design?.widget_design?.fields?.show_branding?.value) === 1
                                 ? `
-                                    <span id="powered_by_text">
+                                    <span id="mhacc_pbt">
                                         <a href="https://mh-accessibility.de" target="_blank" rel="noopener">
                                             MH-ACCESSIBILITY.DE
                                         </a>
