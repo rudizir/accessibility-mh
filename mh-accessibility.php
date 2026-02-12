@@ -16,13 +16,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-
 define( 'MHACC_WIDGET_PATH', plugin_dir_path( __FILE__ ) );
 define( 'MHACC_WIDGET_URL', plugin_dir_url( __FILE__ ) );
 define( 'MHACC_LINK_TO_RATINGS', 'https://mh-accessibility.de/');
 
 define( 'MHACC_VERSION', '1.6.2');
-
 
 
 spl_autoload_register(function ($class) {
