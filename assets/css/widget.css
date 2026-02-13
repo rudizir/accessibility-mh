@@ -1001,10 +1001,12 @@ body.mhacc--readable_font * {
     #mhacc-panel[data-size="small"] #mhacc-panel-header-first strong {
         font-size: 12px;
     }
+    /*
     #mhacc-panel[data-size="small"] #mhacc-panel-header-first svg {
         width: 18px;
         height: 18px;
     }
+    */
 
 
 
@@ -1043,13 +1045,17 @@ body.mhacc--readable_font * {
 }
 
 @media (max-width: 410px) {
+    /*
      #mhacc-panel-header-first strong {
         font-size: 12px;
     }
+    */
+    /*
     #mhacc-panel-header-first svg {
         width: 18px;
         height: 18px;
     }
+    */
     #mhacc-misc-wrap {
         margin:14px;
     }
@@ -1060,15 +1066,19 @@ body.mhacc--readable_font * {
         gap: 10px;
     }
     */
+    /*
     #mhacc-panel[data-size="large"][data-style="style_1"] .mhacc-panel-group-features,
     #mhacc-panel[data-style="style_1"] .mhacc-panel-group-features {
         grid-template-columns: repeat(1, 1fr);
     }
+    */
+    /*
     #mhacc-panel[data-style="style_1"] .mhacc-feature-btn-slider, 
     #mhacc-panel[data-style="style_1"] .mhacc-feature-btn-select, 
     #mhacc-panel[data-style="style_1"] .mhacc-feature-btn {
         min-height: auto;
     }
+    */
     
     #mhacc-panel[data-style="style_2"] .mhacc-feature-btn,
     #mhacc-panel[data-style="style_2"] .mhacc-feature-btn-slider,
@@ -1238,5 +1248,37 @@ body.mhacc--readable_font * {
     #mhacc-help-table td {
         padding: 8px;
         font-size: 0.9rem;
+    }
+}
+
+
+@keyframes triggerHelpPulse {
+    0% {
+        transform: scale(1);
+        background: transparent;
+    }
+    70% {
+        transform: scale(1.3);
+        background: red;
+    }
+    100% {
+        transform: scale(1);
+        background: transparent;
+    }
+}
+#mhacc-help-btn.animate-pulse {
+    animation: triggerHelpPulse 1.0s ease-out 2;
+}
+
+
+
+
+
+@media (max-width: 410px) {
+    button#mhacc-help-btn,
+    #mhacc-panel button.mhacc-feature-btn[data-feature="keyboard_navigation"],
+    #mhacc-panel button.mhacc-feature-btn[data-feature="big_cursor"],
+    #mhacc-panel button.mhacc-feature-btn[data-feature="text_zoom"] {
+        display: none;
     }
 }

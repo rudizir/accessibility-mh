@@ -243,7 +243,7 @@
                     box-shadow: 0 0 0 14px ${MHACC.design.widget_design.fields.theme_primary_color.value}00;
                 }
                 100% {
-                    box-shadow: 0 0 0 0 ${MHACC.design.widget_design.fields.theme_primary_color.value}00);
+                    box-shadow: 0 0 0 0 ${MHACC.design.widget_design.fields.theme_primary_color.value}00;
                 }
             }
             #mhacc-panel {
@@ -2201,6 +2201,26 @@ MHACC.help = {
     document.addEventListener("mhacc:feature", () => {
         MHACC.applyFeatures();
         MHACC.applyFeatureEffects();
+    });
+
+    // SPECIAL CLICK keyboard_navigation
+    document.addEventListener("mhacc:feature", (e) => {
+        const { key, value } = e.detail;
+
+        if (key === "keyboard_navigation" && value === true) {
+            const helpBtn = document.getElementById("mhacc-help-btn");
+            if (!helpBtn) return;
+
+            // Animation neu starten
+            helpBtn.classList.remove("animate-pulse");
+            void helpBtn.offsetWidth; // reflow erzwingen
+            helpBtn.classList.add("animate-pulse");
+
+            // Klasse nach Ende entfernen (optional)
+            helpBtn.addEventListener("animationend", () => {
+                helpBtn.classList.remove("animate-pulse");
+            }, { once: true });
+        }
     });
 
 
