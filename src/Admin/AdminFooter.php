@@ -6,7 +6,7 @@ class AdminFooter
 {
     public function __construct()
     {
-        //add_filter('admin_footer_text', [$this, 'render_footer_left']);
+        add_filter('admin_footer_text', [$this, 'render_footer_left']);
         add_filter('update_footer', [$this, 'render_footer_right'], 11);
     }
 

@@ -40,7 +40,9 @@
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
     border-top: 3px solid var(--mhacc_primarycolor);
 }
-
+.mhacc-group-description {
+  margin-top: 0;
+}
 
 
 
