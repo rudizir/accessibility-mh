@@ -4,7 +4,7 @@ Contributors: rudizi
 Tags: Web Accessibility, Accessibility, Accessibility Widget, WCAG, ADA
 Requires at least: 6.0
 Tested up to: 6.9
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -215,6 +215,9 @@ No, not at all. The plugin is designed for beginners. All settings are self-expl
 
 
 == Changelog ==
+= 1.6.3 (Feb 13, 2026) =
+- Add German Language
+
 = 1.6.2 (Feb 12, 2026) =
 - Add dark/night mode
 

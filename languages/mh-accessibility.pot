@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MH-Accessibility\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-11 14:36+0000\n"
+"POT-Creation-Date: 2026-02-13 10:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Loco-Version: 2.8.1; wp-6.9; php-8.4.14\n"
 "X-Domain: mh-accessibility"
 
-#: src/Config/settings-definitions.php:34
+#: src/Config/settings-definitions.php:32
 msgid "Accessibility Statement Link"
 msgstr ""
 
@@ -26,132 +26,92 @@ msgid ""
 "accessibility features."
 msgstr ""
 
-#: src/Config/settings-definitions.php:561
+#: src/Config/settings-definitions.php:338
 msgid "Adds an outline around focused elements"
 msgstr ""
 
-#: src/Config/settings-definitions.php:648
-msgid "Adjust colors for color vision deficiencies"
-msgstr ""
-
-#: src/Config/settings-definitions.php:444
+#: src/Config/settings-definitions.php:269
 msgid "Adjust line spacing"
 msgstr ""
 
-#: src/Config/settings-definitions.php:456
+#: src/Config/settings-definitions.php:280
 msgid "Adjust spacing between letters"
 msgstr ""
 
-#: src/Config/settings-definitions.php:670
-msgid "Adjusts color saturation"
-msgstr ""
-
-#: src/Config/settings-definitions.php:83
-msgid "Arabic"
-msgstr ""
-
-#: src/Config/settings-definitions.php:659
-msgid "Automatically adjusts contrast"
-msgstr ""
-
-#: src/Config/settings-definitions.php:630
+#: src/Config/settings-definitions.php:402
 msgid "Black and white mode"
 msgstr ""
 
-#: src/Config/settings-definitions.php:200
+#: src/Config/settings-definitions.php:136
 msgid "Border Radius"
 msgstr ""
 
-#: src/Config/settings-definitions.php:495
+#: src/Config/settings-definitions.php:316
 msgid "Change text alignment"
 msgstr ""
 
-#: src/Config/settings-definitions.php:79
-msgid "Chinese (Mandarin)"
-msgstr ""
-
-#: src/Config/settings-definitions.php:306
+#: src/Config/settings-definitions.php:219
 msgid "Choose the icon for the widget trigger"
 msgstr ""
 
-#: src/Config/settings-definitions.php:170
+#: src/Config/settings-definitions.php:108
 msgid "Color"
 msgstr ""
 
-#: src/Config/settings-definitions.php:598
+#: src/Config/settings-definitions.php:373
 msgid "Color modes and contrast settings."
 msgstr ""
 
-#: src/Config/settings-definitions.php:647
-msgid "Color Vision Filters"
-msgstr ""
-
-#: src/Config/settings-definitions.php:420
+#: src/Config/settings-definitions.php:247
 msgid "Content Modules"
 msgstr ""
 
-#: src/Config/settings-definitions.php:201
+#: src/Config/settings-definitions.php:137
 msgid "Corner rounding"
 msgstr ""
 
-#: src/Config/settings-definitions.php:527
-msgid "Cursor Reading Aid"
-msgstr ""
-
-#: src/Config/settings-definitions.php:247
+#: src/Config/settings-definitions.php:163
 msgid "Customize the appearance of the trigger."
 msgstr ""
 
-#: src/Config/settings-definitions.php:118
+#: src/Config/settings-definitions.php:64
 msgid "Customize the appearance of the widget."
 msgstr ""
 
-#: src/Admin/AdminHeader.php:74
+#: src/Admin/AdminHeader.php:51
 msgid "Dark"
 msgstr ""
 
-#: src/Config/settings-definitions.php:607
+#: src/Config/settings-definitions.php:381
 msgid "Dark Mode"
 msgstr ""
 
-#: src/Config/settings-definitions.php:95
-msgid "Dutch"
-msgstr ""
-
-#: src/Config/settings-definitions.php:538
-msgid "Dyslexia-Friendly Fonts"
-msgstr ""
-
-#: src/Config/settings-definitions.php:24
+#: src/Config/settings-definitions.php:23
 msgid "Enable Widget"
 msgstr ""
 
-#: src/Config/settings-definitions.php:608
+#: src/Config/settings-definitions.php:382
 msgid "Enables dark color scheme"
 msgstr ""
 
-#: src/Config/settings-definitions.php:25
+#: src/Config/settings-definitions.php:24
 msgid "Enables or disables the accessibility widget."
 msgstr ""
 
-#: src/Config/settings-definitions.php:51
+#: src/Config/settings-definitions.php:48
 msgid "English"
 msgstr ""
 
-#: src/Config/settings-definitions.php:560
+#: src/Config/settings-definitions.php:337
 msgid "Focus Outline"
 msgstr ""
 
-#: src/Config/settings-definitions.php:189
+#: src/Config/settings-definitions.php:126
 msgid "Font Color"
 msgstr ""
 
-#: src/Config/settings-definitions.php:431
+#: src/Config/settings-definitions.php:257
 msgid "Font Size"
-msgstr ""
-
-#: src/Config/settings-definitions.php:63
-msgid "French"
 msgstr ""
 
 #: src/Config/settings-definitions.php:15
@@ -162,51 +122,47 @@ msgstr ""
 msgid "General settings for activation, language, and legal notices."
 msgstr ""
 
-#: src/Config/settings-definitions.php:55
+#: src/Config/settings-definitions.php:51
 msgid "German"
 msgstr ""
 
-#: src/Config/settings-definitions.php:738
+#: src/Config/settings-definitions.php:468
 msgid "Hide Images"
 msgstr ""
 
-#: src/Config/settings-definitions.php:739
+#: src/Config/settings-definitions.php:469
 msgid "Hides images on the page"
 msgstr ""
 
-#: src/Config/settings-definitions.php:618
+#: src/Config/settings-definitions.php:391
 msgid "High Contrast"
 msgstr ""
 
-#: src/Config/settings-definitions.php:717
+#: src/Config/settings-definitions.php:449
 msgid "Highlight a focused reading area"
 msgstr ""
 
-#: src/Config/settings-definitions.php:582
+#: src/Config/settings-definitions.php:357
 msgid "Highlight Headings"
 msgstr ""
 
-#: src/Config/settings-definitions.php:477
+#: src/Config/settings-definitions.php:299
 msgid "Highlight Links"
 msgstr ""
 
-#: src/Config/settings-definitions.php:478
+#: src/Config/settings-definitions.php:300
 msgid "Highlights links on the page"
 msgstr ""
 
-#: src/Config/settings-definitions.php:583
+#: src/Config/settings-definitions.php:358
 msgid "Highlights page headings"
 msgstr ""
 
-#: src/Config/settings-definitions.php:87
-msgid "Hindi"
-msgstr ""
-
-#: src/Config/settings-definitions.php:256
+#: src/Config/settings-definitions.php:171
 msgid "Horizontal position on the page"
 msgstr ""
 
-#: src/Config/settings-definitions.php:706
+#: src/Config/settings-definitions.php:439
 msgid "Horizontal reading guide"
 msgstr ""
 
@@ -222,82 +178,60 @@ msgstr ""
 msgid "If you like MH Accessibility, please give us a"
 msgstr ""
 
-#: src/Config/settings-definitions.php:539
-msgid "Improves readability for dyslexia"
-msgstr ""
-
-#: src/Config/settings-definitions.php:432
+#: src/Config/settings-definitions.php:258
 msgid "Increase or decrease text size"
 msgstr ""
 
-#: src/Config/settings-definitions.php:619
+#: src/Config/settings-definitions.php:392
 msgid "Increases color contrast"
 msgstr ""
 
-#: src/Config/settings-definitions.php:658
-msgid "Intelligent Contrast"
-msgstr ""
-
-#: src/Config/settings-definitions.php:680
+#: src/Config/settings-definitions.php:412
 msgid "Invert Colors"
 msgstr ""
 
-#: src/Config/settings-definitions.php:681
+#: src/Config/settings-definitions.php:413
 msgid "Inverts page colors"
 msgstr ""
 
-#: src/Config/settings-definitions.php:67
-msgid "Italian"
-msgstr ""
-
-#: src/Config/settings-definitions.php:103
-msgid "Japanese"
-msgstr ""
-
-#: src/Config/settings-definitions.php:749
-#: src/Config/settings-definitions.php:750
+#: src/Config/settings-definitions.php:478
+#: src/Config/settings-definitions.php:479
 msgid "Keyboard-Navigation"
 msgstr ""
 
-#: src/Config/settings-definitions.php:45
+#: src/Config/settings-definitions.php:42
 msgid "Language"
 msgstr ""
 
-#: src/Config/settings-definitions.php:46
+#: src/Config/settings-definitions.php:43
 msgid "Language of the widget for visitors."
 msgstr ""
 
-#: src/Config/settings-definitions.php:160
-#: src/Config/settings-definitions.php:374
+#: src/Config/settings-definitions.php:100
 msgid "Large"
 msgstr ""
 
-#: src/Config/settings-definitions.php:505
+#: src/Config/settings-definitions.php:325
 msgid "Large Cursor"
 msgstr ""
 
-#: src/Config/settings-definitions.php:455
+#: src/Config/settings-definitions.php:279
 msgid "Letter Spacing"
 msgstr ""
 
-#: src/Admin/AdminHeader.php:70
+#: src/Admin/AdminHeader.php:58
 msgid "Light"
 msgstr ""
 
-#: src/Config/settings-definitions.php:210
-msgid "Light / Dark Mode"
-msgstr ""
-
-#: src/Config/settings-definitions.php:443
+#: src/Config/settings-definitions.php:268
 msgid "Line Height"
 msgstr ""
 
-#: src/Config/settings-definitions.php:506
+#: src/Config/settings-definitions.php:326
 msgid "Makes the cursor larger"
 msgstr ""
 
-#: src/Config/settings-definitions.php:156
-#: src/Config/settings-definitions.php:370
+#: src/Config/settings-definitions.php:97
 msgid "Medium"
 msgstr ""
 
@@ -309,198 +243,125 @@ msgstr ""
 msgid "MH-Accessibility Team"
 msgstr ""
 
+#. %s: plugin version number
+#: src/Admin/AdminFooter.php:56
+#, php-format
+msgid "MH-Accessibility Version %s"
+msgstr ""
+
 #: src/Admin/AdminHeader.php:16 src/Admin/Admin.php:43 src/Admin/Admin.php:44
 msgid "Modules"
 msgstr ""
 
-#: src/Config/settings-definitions.php:629
+#: src/Config/settings-definitions.php:401
 msgid "Monochrome"
 msgstr ""
 
-#: src/Config/settings-definitions.php:550
-msgid "Optimizes text spacing"
-msgstr ""
-
-#: src/Config/settings-definitions.php:695
+#: src/Config/settings-definitions.php:429
 msgid "Orientation & Navigation"
 msgstr ""
 
-#: src/Config/settings-definitions.php:91
-msgid "Polish"
-msgstr ""
-
-#: src/Config/settings-definitions.php:71
-msgid "Portuguese"
-msgstr ""
-
-#: src/Config/settings-definitions.php:171
+#: src/Config/settings-definitions.php:109
 msgid "Primary color of the widget"
 msgstr ""
 
-#: src/Config/settings-definitions.php:466
+#: src/Config/settings-definitions.php:289
 msgid "Readable Font"
 msgstr ""
 
-#: src/Config/settings-definitions.php:696
+#: src/Config/settings-definitions.php:430
 msgid "Reading aids, focus tools, and animation settings."
 msgstr ""
 
-#: src/Config/settings-definitions.php:705
+#: src/Config/settings-definitions.php:438
 msgid "Reading Line"
 msgstr ""
 
-#: src/Config/settings-definitions.php:716
+#: src/Config/settings-definitions.php:448
 msgid "Reading Mask"
 msgstr ""
 
-#: src/Config/settings-definitions.php:517
-msgid "Reads text aloud"
-msgstr ""
-
-#: src/Config/settings-definitions.php:230
-msgid "Remove Branding"
-msgstr ""
-
-#: src/Config/settings-definitions.php:231
-msgid "Removes branding from the widget"
-msgstr ""
-
-#: src/Config/settings-definitions.php:390
-msgid "Round"
-msgstr ""
-
-#: src/Config/settings-definitions.php:75
-msgid "Russian"
-msgstr ""
-
-#: src/Config/settings-definitions.php:669
-msgid "Saturation"
-msgstr ""
-
-#: src/Config/settings-definitions.php:394
-msgid "Semi-Round"
-msgstr ""
-
-#: src/Config/settings-definitions.php:421
+#: src/Config/settings-definitions.php:248
 msgid "Settings for font size, readability, and links."
 msgstr ""
 
-#: src/Config/settings-definitions.php:362
-msgid "Size of the trigger icon"
+#: src/Config/settings-definitions.php:146
+msgid "Show Branding"
 msgstr ""
 
 #: src/Config/settings-definitions.php:147
+msgid "Show branding from the widget"
+msgstr ""
+
+#: src/Config/settings-definitions.php:89
 msgid "Size of the widget"
 msgstr ""
 
-#: src/Config/settings-definitions.php:152
-#: src/Config/settings-definitions.php:366
+#: src/Config/settings-definitions.php:94
 msgid "Small"
 msgstr ""
 
-#: src/Config/settings-definitions.php:549
-msgid "Smart Spacing"
-msgstr ""
-
-#: src/Config/settings-definitions.php:59
-msgid "Spanish"
-msgstr ""
-
-#: src/Config/settings-definitions.php:398
-msgid "Square"
-msgstr ""
-
-#: src/Config/settings-definitions.php:727
+#: src/Config/settings-definitions.php:458
 msgid "Stop Animations"
 msgstr ""
 
-#: src/Config/settings-definitions.php:571
+#: src/Config/settings-definitions.php:347
 msgid "Stop Autoplay"
 msgstr ""
 
-#: src/Config/settings-definitions.php:728
+#: src/Config/settings-definitions.php:459
 msgid "Stops all animations"
 msgstr ""
 
-#: src/Config/settings-definitions.php:572
+#: src/Config/settings-definitions.php:348
 msgid "Stops autoplay for videos and audio"
 msgstr ""
 
-#: src/Config/settings-definitions.php:494
+#: src/Config/settings-definitions.php:315
 msgid "Text Alignment"
 msgstr ""
 
-#: src/Config/settings-definitions.php:190
+#: src/Config/settings-definitions.php:127
 msgid "Text color of the widget"
-msgstr ""
-
-#: src/Config/settings-definitions.php:516
-msgid "Text-to-Speech"
 msgstr ""
 
 #: src/Admin/AdminFooter.php:41
 msgid "Thank you in advance."
 msgstr ""
 
-#: src/Settings/SettingsRenderer.php:45
-msgid "These features are only available in the Pro version."
-msgstr ""
-
-#: src/Config/settings-definitions.php:246
+#: src/Config/settings-definitions.php:162
 msgid "Trigger Design"
 msgstr ""
 
-#: src/Config/settings-definitions.php:305
+#: src/Config/settings-definitions.php:218
 msgid "Trigger Icon"
 msgstr ""
 
-#: src/Config/settings-definitions.php:361
-msgid "Trigger Icon Size"
-msgstr ""
-
-#: src/Config/settings-definitions.php:385
-msgid "Trigger Icon Style"
-msgstr ""
-
-#: src/Config/settings-definitions.php:255
+#: src/Config/settings-definitions.php:170
 msgid "Trigger Position X"
 msgstr ""
 
-#: src/Config/settings-definitions.php:280
+#: src/Config/settings-definitions.php:194
 msgid "Trigger Position Y"
 msgstr ""
 
-#: src/Config/settings-definitions.php:99
-msgid "Turkish"
-msgstr ""
-
-#: src/Config/settings-definitions.php:35
+#: src/Config/settings-definitions.php:33
 msgid "URL to the official accessibility statement of your website."
 msgstr ""
 
-#: src/Config/settings-definitions.php:467
+#: src/Config/settings-definitions.php:290
 msgid "Uses an easy-to-read font"
 msgstr ""
 
-#. %s: plugin version number
-#: src/Admin/AdminFooter.php:56
-#, php-format
-msgid "Version %s"
-msgstr ""
-
-#: src/Config/settings-definitions.php:281
+#: src/Config/settings-definitions.php:195
 msgid "Vertical position on the page"
 msgstr ""
 
-#: src/Config/settings-definitions.php:597
+#: src/Config/settings-definitions.php:372
 msgid "Visual Modules"
 msgstr ""
 
-#: src/Config/settings-definitions.php:386
-msgid "Visual style of the trigger icon"
-msgstr ""
-
-#: src/Config/settings-definitions.php:127
+#: src/Config/settings-definitions.php:72
 msgid "Visual style of the widget"
 msgstr ""
 
@@ -508,22 +369,14 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: src/Config/settings-definitions.php:211
-msgid "Widget appearance"
-msgstr ""
-
-#: src/Config/settings-definitions.php:117
+#: src/Config/settings-definitions.php:63
 msgid "Widget Design"
 msgstr ""
 
-#: src/Config/settings-definitions.php:146
+#: src/Config/settings-definitions.php:88
 msgid "Widget Size"
 msgstr ""
 
-#: src/Config/settings-definitions.php:126
+#: src/Config/settings-definitions.php:71
 msgid "Widget Style"
-msgstr ""
-
-#: src/Config/settings-definitions.php:528
-msgid "Zooms text near the cursor"
 msgstr ""
